@@ -620,11 +620,14 @@ there.
   color: white;
   margin-top: -41px;
   margin-bottom: 40px;
-  padding: 25px 0 0;
+  padding: 0;
   float: left;
   width: 100%;
   z-index: 100;
   position: relative;
+}
+.banner .portfolio-container {
+  margin-bottom: 0;
 }
 .download.banner {
   background-color: #eee;
