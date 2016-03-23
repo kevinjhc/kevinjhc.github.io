@@ -593,20 +593,6 @@ there.
   -moz-osx-font-smoothing: grayscale;
   position: relative;
 }
-@media (min-width: 500px) {
-  .hvr-outline-out {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important;
-    -webkit-transform: none !important;
-    -moz-transform: none !important;
-    -o-transform: none !important;
-    -ms-transform: none !important;
-    transform: none !important;
-  }
-}
 .hvr-outline-out:before {
   content: '';
   position: absolute;
@@ -668,4 +654,27 @@ there.
 }
 .symphony.hvr-outline-out:hover:before, .symphony.hvr-outline-out:focus:before, .symphony.hvr-outline-out:active:before {
   background-color: #2181CA;
+}
+
+@media (max-device-width: 1024px) {
+  .hvr-outline-out, .hvr-outline-out:before {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+  }
+  .hudl.hvr-outline-out:hover:before, .hudl.hvr-outline-out:focus:before, .hudl.hvr-outline-out:active:before,
+  .ubersense.hvr-outline-out:hover:before, .ubersense.hvr-outline-out:focus:before, .ubersense.hvr-outline-out:active:before,
+  .symphony.hvr-outline-out:hover:before, .symphony.hvr-outline-out:focus:before, .symphony.hvr-outline-out:active:before {
+    background-color: transparent;
+  }
+  .hudl:hover a, .ubersense:hover a, .symphony:hover a {
+    color: inherit;
+  }
 }
