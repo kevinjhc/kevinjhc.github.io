@@ -484,7 +484,18 @@ there.
   float: left;
   margin-right: 2.5rem;
 }
-
+.description {
+  float: left;
+  width: 69%;
+}
+@media (max-width: 360px) {
+  .app_icon {
+    margin-right: 2rem;
+  }
+  .description {
+    width: 66%;
+  }
+}
 
 /* Navbar */
 .navbar{
