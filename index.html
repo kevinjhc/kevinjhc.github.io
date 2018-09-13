@@ -1,148 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Kevin Chang - UX Designer</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Kevin Chang</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Work+Sans:700,500,300' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/fontello.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-
+  <link rel="stylesheet" href="css/tachyons.min.css">
 </head>
-<body>
+<body class="sans-serif pb5">
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="ph3 pv1 w-100 bb b--black-10">
+  <main class="mw7 center">
+    <article class="dt w-100 pb2 mt2">
+      <a href="index.html" class="link dim dt">
+        <div class="dtc v-mid" style="width: 3.5rem;">
+          <img src="images/me.png" class="db br2" style="width: 3.5rem; height: 3.5rem;" />
+        </div>
+        <div class="dtc v-mid pl3">
+          <h1 class="f5 fw6 lh-title black mv0">Kevin Chang</h1>
+          <h2 class="f6 fw4 mt0 mb0 black-60">Product Designer</h2>
+        </div>
+      </a>
+      <!--<div class="dtc v-mid tr">
+        <a class="link dark-gray f6 dib mr3 hover-blue" href="#about-me">About Me</a>
+        <a class="link dark-gray f6 dib mr3 hover-gold" href="#portfolio">Portfolio</a>
+        <a class="link dark-gray f6 dib hover-purple" href="#process">Design Process</a>
+      </div>-->
+    </article>
+  </main>
+</div>
 
-  <nav class="navbar">
-    <a class="logo" href="index.html">
-      <h6><strong>Kevin Chang</strong>, UX Designer</h6>
-    </a>
-    <ul class="navbar-list">
-      <li class="navbar-item"><a class="navbar-link" href="index.html">Work</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="about.html">About Me</a></li>
-    </ul>
-  </nav>
+<div id="about-me" class="pa3 pb0 mt1">
+  <article class="mw7 center">
+    <h4 class="w-100 f6 ttu bg-blue ph2 pb1 pt4 white fw4 br1 dib v-mid mv0 mr3">About Me</h4>
+    <div class="mt3 mb0 ph2">
+      <h1 class="f5 fw3 lh-copy">Hi, I’m Kevin. I'm a Product Designer at Pivotal Labs in Boston, MA. Over the past seven years I've launched and scaled web and mobile products for startups and enterprise companies, including <a class="link bb pb1 b--blue dim blue" href="https://hudl.com" target="_blank">Hudl</a>, the <a class="link bb pb1 b--blue dim blue" href="https://www.fastcompany.com/40588729/the-air-force-learned-to-code-and-saved-the-pentagon-millions" target="_blank">US Air Force</a>, and <a class="link bb pb1 b--blue dim blue" href="https://connectedhealth.partners.org/" target="_blank">Partners Healthcare</a>.</h1>
 
-  <div class="container">
-    <div class="row">
-      <div class="ten columns offset-by-one">
+      <div class="w-100 pa0">
+        <div class="cf">
+          <div class="fl w-50 pr2 mb0-ns mb2">
+            <h1 class="f6 fw4 lh-title black-60 mb2 ttu relative">
+              <svg style="width:24px;height:24px;margin-left:-2px;" viewBox="0 0 24 24">
+                <path fill="#666666" d="M18,18H12V12.21C11.34,12.82 10.47,13.2 9.5,13.2C7.46,13.2 5.8,11.54 5.8,9.5A3.7,3.7 0 0,1 9.5,5.8C11.54,5.8 13.2,7.46 13.2,9.5C13.2,10.47 12.82,11.34 12.21,12H18M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
+              </svg>
+              <span class="absolute fw5" style="margin: 3px 0 0 6px;">Design Skills</span>
+            </h1>
+            <ul class="f6 fw4 lh-copy black mv0 measure" style="padding-left: 29px;">
+              <li>Facilitating user interviews</li>
+              <li>Defining user personas</li>
+              <li>Creating and validating prototypes</li>
+              <li>Visual &amp; interaction design</li>
+              <li>Pair designing</li>
+            </ul>
+          </div>
+          <div class="fl w-50">
+            <h1 class="f6 fw4 lh-title black-60 mb2 ttu relative">
+              <svg style="width:24px;height:24px;margin-left:-2px;" viewBox="0 0 24 24">
+                <path fill="#666666" d="M11,6.5V9.33L8.33,12L11,14.67V17.5L5.5,12M13,6.43L18.57,12L13,17.57V14.74L15.74,12L13,9.26M5,3C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3H5Z" />
+              </svg>
+              <span class="absolute fw5" style="margin: 3px 0 0 6px;">Coding Skills</span>
+            </h1>
+            <ul class="f6 fw4 lh-copy black mv0 measure" style="padding-left: 29px;">
+              <li>Creating design systems</li>
+              <li>CSS, SASS</li>
+              <li>Javascript, jQuery</li>
+              <li>Ruby on Rails</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        <p>
-          I design and iterate on products and interactive experiences for people. I've worked on messaging tools for Hudl's 3.5 million users to revamping Ubersense's iOS and Android apps, which have reached over 4 million downloads.
-        </p>
+    </div>
+  </article>
+</div>
 
-        <br />
+<div id="portfolio" class="pa3 pb0 mt4">
+  <article class="mw7 center">
+    <h4 class="w-100 f6 ttu bg-gold pb1 pt4 ph2 white fw4 br1 dib v-mid mv0 mr3">Portfolio</h4>
 
-        <table class="portfolio-container u-full-width">
-          <thead>
-            <tr>
-              <th>Case Studies</th>
-            </tr>
-          </thead>
-          <tbody>
-           
-            <tr>
-              <td class="hudl hvr-outline-out">
-                <a href="work/messaging.html">
-                  <div class="portfolio-item">
-                    
-                    <img class="app_icon" src="images/ic_hudl.png">
-                    <div class="description">
-                      <h5>Process: Hudl Messaging</h5>
-                      <p>On creating tools that facilitate team communication <i class="icon-angle-right"></i></p>
-                    </div>
+    <div class="w-100 pa0 pt2">
+        <div class="cf">
+          <div class="fl w-100 w-50-ns pr3-ns ph2">
+            <h4 class="f6 fw5 lh-copy black-60 mv3 ttu">Select Work</h4>
+            <div>
+              <a href="work/messaging.html" class="link dim dt">
+                <div class="dtc w2 v-mid">
+                  <img src="images/ic_hudl.png" class="db br2 w2 h2"/>
+                </div>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">Hudl Messaging →</h1>
+                </div>
+              </a>
+            </div>
+            <div class="mt2">
+              <a href="work/accessibility.html" class="link dim dt">
+                <div class="dtc w2 v-mid">
+                  <img src="images/ic_hudl.png" class="db br2 w2 h2"/>
+                </div>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">Design Details: Typography →</h1>
+                </div>
+              </a>
+            </div>
+            <div class="mt2">
+              <a href="work/ubersense.html" class="link dim dt">
+                <div class="dtc w2 v-mid">
+                  <img src="images/ic_ubersense.png" style="background-color: #c0392b;" class="db br2 w2 h2"/>
+                </div>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">Design Details: Mobile Dropdown →</h1>
+                </div>
+              </a>
+            </div>
+            <div class="mt2">
+              <a href="work/code.html" class="link dim dt">
+                <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g fill="#666666" fill-rule="nonzero">
+                        <path d="M14.2222222,6.22222222 L14.2222222,11.2533333 L9.47555556,16 L14.2222222,20.7466667 L14.2222222,25.7777778 L4.44444444,16 L14.2222222,6.22222222 Z M17.7777778,6.09777778 L27.68,16 L17.7777778,25.9022222 L17.7777778,20.8711111 L22.6488889,16 L17.7777778,11.1288889 L17.7777778,6.09777778 Z M3.55555556,0 C1.58222222,0 0,1.6 0,3.55555556 L0,28.4444444 C0,30.4081236 1.59187645,32 3.55555556,32 L28.4444444,32 C30.4081236,32 32,30.4081236 32,28.4444444 L32,3.55555556 C32,1.59187645 30.4081236,0 28.4444444,0 L3.55555556,0 Z"></path>
+                      </g>
+                  </g>
+                </svg>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">Collection of code snippets →</h1>
+                </div>
+              </a>
+            </div>
+          </div>
 
-                  </div>
-                </a>
-              </td>
-            </tr>
 
-            <tr>
-              <td class="hudl hvr-outline-out">
-                <a href="work/accessibility.html">
-                  <div class="portfolio-item">
-                      
-                    <img class="app_icon" src="images/ic_hudl.png">
-                    <div class="description">
-                      <h5>Design Details: Typography</h5>
-                      <p>Using typography to clarify Hudl's mobile app accessibility <i class="icon-angle-right"></i></p>
-                    </div>
+          <div class="fl w-100 w-50-ns ph2 ph0-ns">
+            <h4 class="f6 fw5 lh-copy black-60 mv3 ttu">Talks &amp; Workshops I've given</h4>
+            <div>
+              <a href="talks/interviews.html" class="link dim dt">
+                <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g fill="#357EDD" fill-rule="nonzero">
+                          <path d="M5.33333333,24.8888889 C5.33333333,21.3333333 12.4444444,19.3777778 16,19.3777778 C19.5555556,19.3777778 26.6666667,21.3333333 26.6666667,24.8888889 L26.6666667,26.6666667 L5.33333333,26.6666667 L5.33333333,24.8888889 Z M21.3333333,10.6666667 C21.3333333,13.6121853 18.9455187,16 16,16 C13.0544813,16 10.6666667,13.6121853 10.6666667,10.6666667 C10.6666667,7.721148 13.0544813,5.33333333 16,5.33333333 C18.9455187,5.33333333 21.3333333,7.721148 21.3333333,10.6666667 Z M0,3.55555556 L0,28.4444444 C0,30.4081236 1.59187645,32 3.55555556,32 L28.4444444,32 C30.4081236,32 32,30.4081236 32,28.4444444 L32,3.55555556 C32,1.59187645 30.4081236,0 28.4444444,0 L3.55555556,0 C1.58222222,0 0,1.6 0,3.55555556 Z"></path>
+                      </g>
+                  </g>
+                </svg>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">User Interviews 101 Workshop →</h1>
+                </div>
+              </a>
+            </div>
+            <div class="mt2">
+              <a href="talks/prototype.html" class="link dim dt">
+                <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g fill="#A463F2" fill-rule="nonzero">
+                          <path d="M0,0 L0,5.81818182 L1.45454545,5.81818182 L1.45454545,26.1818182 L0,26.1818182 L0,32 L5.81818182,32 L5.81818182,30.5454545 L26.1818182,30.5454545 L26.1818182,32 L32,32 L32,26.1818182 L30.5454545,26.1818182 L30.5454545,5.81818182 L32,5.81818182 L32,0 L26.1818182,0 L26.1818182,1.45454545 L5.81818182,1.45454545 L5.81818182,0 M5.81818182,4.36363636 L26.1818182,4.36363636 L26.1818182,5.81818182 L27.6363636,5.81818182 L27.6363636,26.1818182 L26.1818182,26.1818182 L26.1818182,27.6363636 L5.81818182,27.6363636 L5.81818182,26.1818182 L4.36363636,26.1818182 L4.36363636,5.81818182 L5.81818182,5.81818182 M7.27272727,7.27272727 L7.27272727,18.9090909 L11.6363636,18.9090909 L11.6363636,24.7272727 L24.7272727,24.7272727 L24.7272727,11.6363636 L18.9090909,11.6363636 L18.9090909,7.27272727 M10.1818182,10.1818182 L16,10.1818182 L16,16 L10.1818182,16 M18.9090909,14.5454545 L21.8181818,14.5454545 L21.8181818,21.8181818 L14.5454545,21.8181818 L14.5454545,18.9090909 L18.9090909,18.9090909"></path>
+                      </g>
+                  </g>
+                </svg>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">Choosing Prototype Fidelity →</h1>
+                </div>
+              </a>
+            </div>
+            <div class="mt2">
+              <a href="talks/css.html" class="link dim dt">
+                <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g fill="#19A974" fill-rule="nonzero">
+                        <path d="M14.2222222,6.22222222 L14.2222222,11.2533333 L9.47555556,16 L14.2222222,20.7466667 L14.2222222,25.7777778 L4.44444444,16 L14.2222222,6.22222222 Z M17.7777778,6.09777778 L27.68,16 L17.7777778,25.9022222 L17.7777778,20.8711111 L22.6488889,16 L17.7777778,11.1288889 L17.7777778,6.09777778 Z M3.55555556,0 C1.58222222,0 0,1.6 0,3.55555556 L0,28.4444444 C0,30.4081236 1.59187645,32 3.55555556,32 L28.4444444,32 C30.4081236,32 32,30.4081236 32,28.4444444 L32,3.55555556 C32,1.59187645 30.4081236,0 28.4444444,0 L3.55555556,0 Z"></path>
+                      </g>
+                  </g>
+                </svg>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">Intro to CSS Workshop →</h1>
+                </div>
+              </a>
+            </div>
+            <div class="mt2">
+              <a href="talks/feedback.html" class="link dim dt">
+                <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g fill="#FF80CC" fill-rule="nonzero">
+                          <path d="M11.2,32 C10.3163444,32 9.6,31.2836556 9.6,30.4 L9.6,25.6 L3.2,25.6 C1.4326888,25.6 0,24.1673112 0,22.4 L0,3.2 C0,1.424 1.44,0 3.2,0 L28.8,0 C30.5673112,0 32,1.4326888 32,3.2 L32,22.4 C32,24.1673112 30.5673112,25.6 28.8,25.6 L19.04,25.6 L13.12,31.536 C12.8,31.84 12.4,32 12,32 L11.2,32 Z M22.4,19.2 L22.4,17.6 C22.4,15.472 18.128,14.4 16,14.4 C13.872,14.4 9.6,15.472 9.6,17.6 L9.6,19.2 L22.4,19.2 Z M16,6.4 C14.2326888,6.4 12.8,7.8326888 12.8,9.6 C12.8,11.3673112 14.2326888,12.8 16,12.8 C17.7673112,12.8 19.2,11.3673112 19.2,9.6 C19.2,7.8326888 17.7673112,6.4 16,6.4 Z"></path>
+                      </g>
+                  </g>
+                </svg>
+                <div class="dtc v-mid pl3">
+                  <h1 class="f6 fw4 lh-copy black mv0">Giving Feedback Talk →</h1>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                  </div>
-                </a>
-              </td>
-            </tr>
+  </article>
+</div>
 
-            <tr>
-              <td class="ubersense hvr-outline-out">
-                <a href="work/ubersense.html">
-                  <div class="portfolio-item">
-                      
-                    <img class="app_icon" src="images/ic_ubersense.png">
-                    <div class="description">
-                      <h5>Design Details: Mobile Dropdown</h5>
-                      <p>How adopting an established pattern confused Ubersense's users <i class="icon-angle-right"></i></p>
-                    </div>
+<div id="process" class="pa3 pb0 mt4">
+  <article class="mw7 center">
+    <h4 class="w-100 f6 ttu bg-purple pb1 pt4 ph2 white fw4 br1 dib v-mid mv0 mr3">Design Process</h4>
 
-                  </div>
-                </a>
-              </td>
-            </tr>
+    <div class="w-100 pa0 pt2 ph2">
+      <div class="cf">
+        <div class="fl w-100 w-50-ns pr2-ns">
+          <h4 class="f6 fw7 lh-title dark-red mt3 mb0 ttu">1. Understand and align on goals</h4>
 
-          </tbody>
-        </table>
+          <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
+          <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
+            <li>Understand business, product, technical goals</li>
+            <li>Stakeholder map exercise</li>
+            <li>Risks and mitigations exercise</li>
+            <li>Path to production exercise</li>
+          </ul>
 
-        <table class="portfolio-container u-full-width">
-          <thead>
-            <tr>
-              <th>More Work</th>
-            </tr>
-          </thead>
-          <tbody>
+          <h4 class="f6 fw7 lh-title dark-pink mt3 mb0 ttu">2. Research and understand the user’s needs</h4>
 
-            <tr>
-              <td class="symphony hvr-outline-out">
-                <a href="http://symphonychurch.com" target="_blank">
-                  <div class="portfolio-item">
-                      
-                    <img class="app_icon" src="images/ic_symphony.png">
-                    <div class="description">
-                      <h5>Symphony Church</h5>
-                      <p>Welcoming first-time visitors to church <i class="icon-link-ext"></i></p>
-                    </div>
+          <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
+          <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
+            <li>Exploratory interviews</li>
+            <li>Proto-personas</li>
+            <li>Day-in-the-life / user scenarios</li>
+            <li>Research synthesis</li>
+          </ul>
 
-                  </div>
-                </a>
-              </td>
-            </tr>
+          <h4 class="f6 fw7 lh-title orange mt3 mb0 ttu">3. Brainstorm how to solve the user’s needs</h4>
 
-          </tbody>
-        </table>
+          <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
+          <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
+            <li>Design studio</li>
+            <li>Create wireframes and prototypes</li>
+          </ul>
 
-        <br /><br />
+          <h4 class="f6 fw7 lh-title pink mt3 mb0 ttu">4. Validate whether solution concepts meet users' needs</h4>
 
+          <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
+          <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
+            <li>Low-fidelity UI</li>
+            <li>Test prototypes and get user feedback</li>
+          </ul>
+
+          <h4 class="f6 fw7 lh-title blue mt3 mb0 ttu">5. Identify MVP to start building product</h4>
+
+          <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
+          <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
+            <li>High-fidelity UI</li>
+            <li>Beta release plans</li>
+            <li>Assumptions tracker</li>
+          </ul>
+
+          <h4 class="f6 fw7 lh-title green mt3 mb0 ttu">6. Build and release product iteratively</h4>
+
+          <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
+          <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
+            <li>Continue to meet with users</li>
+            <li>Increase design fidelity by creating a style guide</li>
+          </ul>
+
+        </div>
+
+        <div class="fl w-100 w-50-ns">
+          <h4 class="f6 fw5 lh-title black-60 mt3-ns mt5 mb3 ttu">Things I value</h4>
+            <div class="dtc w2 v-mid tc f4 fw6">
+              1
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 fw4 lh-copy black mv0">Balanced Teams</h1>
+              <h1 class="f6 fw4 lh-copy black-60 mv0 measure">Products are most successful when they are developed by a balanced team of designers, product managers, and engineers.</h1>
+            </div>
+          <div class="mt4">
+            <div class="dtc w2 v-mid tc f4 fw6">
+              2
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 fw4 lh-copy black mv0">User Centered Design</h1>
+              <h1 class="f6 fw4 lh-copy black-60 mv0 measure">Many software products spend months to years building and shipping them, only to find that they are hardly used. The product team should be in close contact with users to ensure that valuable software is being built.</h1>
+              </div>
+          </div>
+          <div class="mt4">
+            <div class="dtc w2 v-mid tc f4 fw6">
+              3
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 fw4 lh-copy black mv0">Lean Product Development</h1>
+              <h1 class="f6 fw4 lh-copy black-60 mv0 measure">Products are risky because they are built on assumptions — features should be built incrementally and released early and often to ensure that these assumptions are being validated by actual users.</h1>
+            </div>
+          </div>
+          <div class="mt4">
+            <div class="dtc w2 v-mid tc f4 fw6">
+              4
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 fw4 lh-copy black mv0">Transparency & Alignment</h1>
+              <h1 class="f6 fw4 lh-copy black-60 mv0 measure">Product teams operate most effectively when products are developed transparently — stakeholders and individual team members should understand the team’s current tracks of work and upcoming roadmap.</h1>
+            </div>
+          </div>
+          <div class="mt4">
+            <div class="dtc w2 v-mid tc f4 fw6">
+              5
+            </div>
+            <div class="dtc v-mid pl3">
+              <h1 class="f6 fw4 lh-copy black mv0">Continuous Improvement</h1>
+              <h1 class="f6 fw4 lh-copy black-60 mv0 measure">Product teams should apply tight feedback loops not only to the products they work on, but also towards improving their teams. Regular retrospectives and actionable, specific, kind feedback help build trust on a team.</h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </article>
+</div>
+
 </body>
 </html>

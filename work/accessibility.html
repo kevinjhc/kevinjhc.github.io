@@ -1,200 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Kevin Chang - UX Designer</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Kevin Chang</title>
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Work+Sans:700,500,300' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../css/fontello.css">
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/skeleton.css">
-
+  <link rel="stylesheet" href="../css/tachyons.min.css">
 </head>
-<body>
+<body class="sans-serif pb5">
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-  <nav class="navbar">
-    <a class="logo" href="../index.html">
-      <h6><strong>Kevin Chang</strong>, UX Designer</h6>
-    </a>
-    <ul class="navbar-list">
-      <li class="navbar-item"><a class="navbar-link" href="../index.html">Work</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="../about.html">About Me</a></li>
+<div class="ph3 pv1 w-100 bb b--black-10">
+  <main class="mw7 center">
+    <article class="dt w-100 pb2 mt2">
+      <a href="../index.html" class="link dim dt">
+        <div class="dtc v-mid" style="width: 3.5rem;">
+          <img src="../images/me.png" class="db br2" style="width: 3.5rem; height: 3.5rem;" />
+        </div>
+        <div class="dtc v-mid pl3">
+          <h1 class="f5 fw6 lh-title black mv0">Kevin Chang</h1>
+          <h2 class="f6 fw4 mt0 mb0 black-60">Product Designer</h2>
+        </div>
+      </a>
+    </article>
+  </main>
+</div>
+
+<div class="ph3 pv1 w-100 bb b--black-10">
+  <main class="mw7 center">
+    <article class="dt w-100 pb2 mt2">
+      <a class="link dim blue" href="../index.html">← Back</a>
+    </article>
+  </main>
+</div>
+
+<div class="pa3 pb0 mt0">
+  <article class="mw7 center">
+    <div style="background-color: #F47623;" class="w-100 f7 pa2 white fw4 br1 dib v-mid mb0 mt2 mr3">
+      <div class="dtc w2 v-mid">
+        <img src="../images/ic_hudl.png" class="db br2 w2 h2"/>
+      </div>
+      <div class="dtc v-mid pl3">
+        <h1 class="f6 fw4 lh-copy white mv0">Design Details: Typography</h1>
+        </h1>
+      </div>
+
+      <div class="w-90">
+        <div class="cf">
+          <div class="fl w-50 pr2 mb0">
+            <p class="f6 fw5 ttu lh-copy mb0">
+              Overview
+            </p>
+            <p class="f7 fw3 lh-copy mt1 mb0">
+              I observed users using the Hudl app and changed the typography to make the app more accessible.
+            </p>
+          </div>
+          <div class="fl w-50 pr0 mb0">
+            <p class="f6 fw5 ttu lh-copy mb0">
+              My Role
+            </p>
+            <ul class="f7 fw4 pl4 lh-copy mt1 mb0">
+              <li>Visual design</li>
+              <li>User research</li>
+              <li>Design systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="pa3 pb0 mt0">
+  <article class="mw7 center">
+
+    <div class="w-90 center">
+      <img src="../images/work/accessibility_result.png">
+    </div>
+
+    <h1 class="f6 fw5 lh-title black-60 mt4 mb2 ttu relative">Background</h1>
+
+    <p class="f5 fw4 lh-copy">I worked on Hudl's messaging features. You can read more about the process of creating Hudl Messaging <a class="link bb pb0 b--blue dim blue" href="messaging.html">here.</a></p>
+
+    <p class="f5 fw4 lh-copy">During the user research process, I discovered that the typography in the Hudl iOS app hindered the users’ experience because it was too small to read. Observing our users in-person helped me understand that our users need flexible typography. This insight helped me form two guidelines for Hudl's mobile UI.</p>
+
+    <h1 class="f6 fw5 lh-title black-60 mt4 mb2 ttu relative">What did I observe?</h1>
+
+    <p class="f5 fw4 lh-copy">Our team visited a high school basketball coach to observe how he used Hudl. He’s an active user of the Hudl product - looking at his metrics alone, one might think that he doesn’t have any issues using our product. However, the trip revealed that we weren't appropriately displaying typography in the app.</p>
+
+    <p class="f5 fw4 lh-copy">Let’s compare the following two screens: On the left is a sample screen from the iOS app. Clearly, the UI deviates from the iOS Human Interface guidelines in two ways:</p>
+
+    <ul class="f5 fw4 pl4 lh-copy black mt0 mb3">
+      <li>The font size is too small and the line height is too tight</li>
+      <li>The color of the text, especially the section headers, is too low contrast</li>
     </ul>
-  </nav>
 
-  <div class="hudl banner">
-    <div class="container">
-      <div class="row">
-        <div class="ten columns offset-by-one">
-
-          <table class="portfolio-container u-full-width">
-           
-            <tr>
-              <td class="hudl">
-                <div class="portfolio-item">
-                  
-                  <img class="app_icon" src="../images/ic_hudl.png">
-                  <div class="description">
-                    <h5>Design Details: Typography</h5>
-                    <p>Using typography to clarify Hudl's mobile app accessibility</p>
-                  </div>
-
-                </div>
-              </td>
-            </tr>
-
-          </table>
-
-        </div>
-      </div>
+    <div class="w-90 center">
+      <img src="../images/work/accessibility_compare.png">
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="ten columns offset-by-one">
+    <p class="f5 fw4 lh-copy">On the right is how this coach actually uses his device. When we looked at how this coach was reading his email, his font size was increased to the max.</p>
 
-        <table class="portfolio-container u-full-width">
-          <thead>
-            <tr>
-              <th>Overview</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>I work on messaging tools at Hudl. You can read more on the process of creating those tools <a href="messaging.html">here</a>.</p><br />
+    <p class="f5 fw4 lh-copy">We weren’t taking advantage of iOS Dynamic Type, an OS-level feature that allows the user to make the font size larger or smaller. Our app didn't allow the coach to read text the way he wanted to!</p>
 
-                <p>During the user research process, I discovered that the typography in the Hudl iOS app hindered the users’ experience because it was too small to read. Observing our users in-person helped me understand that our users need flexible typography. This insight helped me form two guidelines for Hudl's mobile UI.</p><br />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <p class="f5 fw4 lh-copy">This anecdote was affirmed through several other on-site visits. Once we understood that a fair number of the coaches that were using the apps were older males that needed visual assistance, we knew we needed to alter the UI.</p>
 
-        <table class="portfolio-container u-full-width">
-          <thead>
-            <tr>
-              <th>What did I observe?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>Our team visited a high school basketball coach to observe how he used Hudl. He’s an active user of the Hudl product - looking at his metrics alone, one might think that he doesn’t have any issues using our product. However, the trip revealed that we weren't appropriately displaying typography in the app.</p><br />
+    <h1 class="f6 fw5 lh-title black-60 mt4 mb2 ttu relative">Guidelines</h1>
 
-                <p>Let’s compare the following two screens: On the left is a sample screen from the iOS app. Clearly, the UI deviates from the iOS Human Interface guidelines in two ways:</p><br />
+    <p class="f5 fw4 lh-copy">The first change was to create a typographic hierachy and take advantage of iOS Dynamic Type. On the left is iOS (font: SF UI Text) and on the right is Android (font: Roboto).</p>
 
-                <div class="post-image">
-                  <img src="../images/work/accessibility_compare.png"><br /><br />
-                </div>
-
-                <ol>
-                  <li>The font size is too small and the line height is too tight</li>
-                  <li>The color of the text, especially the section headers, is too low contrast</li>
-                </ol>
-
-                <p>On the right is how this coach actually uses his device. When we looked at how this coach was reading his email, his font size was increased to the max.</p><br />
-
-                <p>We weren’t taking advantage of iOS Dynamic Type, an OS-level feature that allows the user to make the font size larger or smaller. Our app didn't allow the coach to read text the way he wanted to!</p><br />
-
-                <p>This anecdote was affirmed through several other on-site visits. Once we understood that a fair number of the coaches that were using the apps were older males that needed visual assistance, we knew we needed to alter the UI.</p><br />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table class="portfolio-container u-full-width">
-          <thead>
-            <tr>
-              <th>Guidelines</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>The first change was to create a typographic hierachy and take advantage of iOS Dynamic Type. On the left is iOS (font: SF UI Text) and on the right is Android (font: Roboto).</p><br />
-
-                <div class="post-image">
-                  <img src="../images/work/accessibility_hierarchy.png"><br /><br />
-                </div>
-
-                <p>Even with a hierarchy, typography by itself isn’t enough. There still needs to be an underlying principle that unifies the way our apps look. The second change was to align the hierarchy to a unified baseline grid. The baseline grid is set at 4dp. It had to be an even number that was common enough to accommodate multiple screen densities.</p><br />
-
-                <div class="post-image">
-                  <img src="../images/work/accessibility_baseline.png"><br /><br />
-                </div>
-
-                <p>Put together, the result is an iOS app that is easier to read with a more consistent UI. Taking advantage of Dynamic Type allows the app to accommodate each user's visual needs.</p><br />
-
-                <p>The following is a reference design used for the messaging feature. Each piece of the UI has been turned into a reusable component that is aligned to this 4pt grid.</p><br />
-
-                <div class="post-image">
-                  <img src="../images/work/accessibility_result.png"><br /><br />
-                </div>
-
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-      </div>
+    <div class="w-90 center">
+      <img src="../images/work/accessibility_hierarchy.png">
     </div>
-  </div>
 
-  <div class="download banner">
-    <div class="container">
-      <div class="row">
-        <div class="ten columns offset-by-one">
+    <p class="f5 fw4 lh-copy">Even with a hierarchy, typography by itself isn’t enough. There still needs to be an underlying principle that unifies the way our apps look. The second change was to align the hierarchy to a unified baseline grid. The baseline grid is set at 4dp. It had to be an even number that was common enough to accommodate multiple screen densities.</p>
 
-          <div class="six columns">
-            <p style="text-align: center">
-              <a href="https://itunes.apple.com/us/app/hudl/id412223222?mt=8" target="_blank">
-                <img src="../images/img_app-store.png" class="app-logos">
-              </a>
-            </p>
-          </div>
-          <div class="six columns">
-            <p style="text-align: center">
-              <a href="https://play.google.com/store/apps/details?id=com.hudl.hudroid" target="_blank">
-                <img src="../images/img_play-store.png" class="app-logos">
-              </a>
-            </p>
-          </div>
-
-        </div>
-      </div>
+    <div class="w-90 center">
+      <img src="../images/work/accessibility_baseline.png">
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="ten columns offset-by-one">
+    <p class="f5 fw4 lh-copy">Put together, the result is an iOS app that is easier to read with a more consistent UI. Taking advantage of Dynamic Type allows the app to accommodate each user's visual needs.</p>
 
-        <a class="button plain" href="../index.html"><i class="icon-angle-left"></i> Back to Work</a><br /><br />
+    <p class="f5 fw4 lh-copy">The following is a reference design used for the messaging feature. Each piece of the UI has been turned into a reusable component that is aligned to this 4pt grid.</p>
 
-      </div>
-    </div>
-  </div>
+  </article>
+</div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
