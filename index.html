@@ -1,443 +1,594 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Kevin Chang</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/tachyons.min.css">
-  <style>
-    span.step {
-      border-radius: 0.8em;
-      -moz-border-radius: 0.8em;
-      -webkit-border-radius: 0.8em;
-      color: #ffffff;
-      display: inline-block;
-      line-height: 1.6em;
-      margin-right: 5px;
-      text-align: center;
-      width: 25px;
-    }
-  </style>
-</head>
-<body class="sans-serif pb4">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kevin Chang - UX Design &amp; Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<header class="w-100 pa3 bg-white bb b--black-10">
-  <div class="db dt-ns mw7 center w-100">
-    <div class="db dtc-ns v-mid tl w-30-ns w-100">
-      <a href="index.html" class="link dim dt">
-        <div class="dtc v-mid" style="width: 3.5rem;">
-          <img src="images/me.png" class="db br2" style="width: 3.5rem; height: 3.5rem;" />
-        </div>
-        <div class="dtc v-mid pl3">
-          <h1 class="f5 fw6 lh-title black mv0">Kevin Chang</h1>
-          <h2 class="f6 fw4 mt0 mb0 black-60">Product Designer</h2>
-        </div>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body class="bg-light">
+
+    <!-- Small -->
+    <div class="d-block d-md-none flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom">
+      <a href="index.html" class="text-decoration-none text-dark media my-0 mr-md-auto">
+        <p class="media-body mb-0 lh-125">
+          <strong class="d-block text-gray-dark">Kevin Chang</strong>
+          UX Designer & Front-end Developer
+        </p>
+      </a>
+
+      <nav class="mt-4 my-md-0 mr-3">
+        <a class="pt-2 pr-2 pb-2 pl-0 text-dark" href="index.html#portfolio">Portfolio</a>
+        <a class="p-2 text-dark" href="index.html#services">Services</a>
+        <a class="p-2 text-dark" href="contact.html">Contact me</a>
+      </nav>
+    </div>
+
+    <!-- Regular -->
+    <div class="d-none d-md-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom">
+      <a href="index.html" class="text-decoration-none text-dark media my-0 mr-md-auto">
+        <img class="bd-placeholder-img mr-3 rounded-lg" width="48" height="48"  src="img/me.jpg">
+        <p class="media-body mb-0 lh-125">
+          <strong class="d-block text-gray-dark">Kevin Chang</strong>
+          UX Designer & Front-end Developer
+        </p>
+      </a>
+
+      <nav class="my-2 my-md-0 mr-3">
+        <a class="pt-2 pr-2 pb-2 pl-0 text-dark" href="index.html#portfolio">Portfolio</a>
+        <a class="p-2 text-dark" href="index.html#services">Services</a>
+      </nav>
+      <a class="btn btn-primary shadow-sm px-4 py-2" href="contact.html">
+        Contact me
+        <div class="arrow-light ml-2"></div>
       </a>
     </div>
-    <nav class="db dtc-ns v-mid w-100 tl tr-ns mt3 mt0-ns">
-      <a href="#about"
-          class="f6 hover-blue link black-70 pv2 dib">
-        About Me
-      </a>
-      <a href="#case-studies"
-          class="f6 hover-blue link black-70 ml3 mr3 pv2 dib">
-        Case Studies
-      </a>
-      <a href="#talks"
-          class="f6 hover-blue link black-70 mr3 pv2 dib">
-        Talks & Workshops
-      </a>
-      <a href="#process"
-          class="f6 hover-blue link black-70 pv2 dib">
-        Process
-      </a>
-    </nav>
-  </div>
-</header>
 
-<div id="about" class="pa3 pb0 mt1">
-  <article class="mw7 center">
-    <h4 class="w-100 f6 ttu bg-blue ph2 pb1 pt4 white fw4 br1 dib v-mid mv0 mr3">About Me</h4>
-    <div class="mt3 mb0 ph2">
-      <h1 class="f5 fw3 lh-copy">Hi, I’m Kevin, a Product Designer in Boston, MA. Over the past seven years I've launched and scaled web and mobile products for startups and enterprise companies, including <a class="link bb b--blue dim blue" href="https://pivotal.io/labs" target="_blank">Pivotal Labs</a>, <a class="link bb b--blue dim blue" href="https://hudl.com" target="_blank">Hudl</a>, the <a class="link bb b--blue dim blue" href="https://www.fastcompany.com/40588729/the-air-force-learned-to-code-and-saved-the-pentagon-millions" target="_blank">US Air Force</a>, and <a class="link bb b--blue dim blue" href="https://connectedhealth.partners.org/" target="_blank">Partners Healthcare</a>.</h1>
+    <div class="p-4">
 
-      <div class="w-100 pa0">
-        <div class="cf">
-          <div class="fl w-50 pr2 mb0-ns mb2">
-            <h1 class="f6 fw4 lh-title black-60 mb2 ttu relative">
-              <svg style="width:24px;height:24px;margin-left:-2px;" viewBox="0 0 24 24">
-                <path fill="#666666" d="M18,18H12V12.21C11.34,12.82 10.47,13.2 9.5,13.2C7.46,13.2 5.8,11.54 5.8,9.5A3.7,3.7 0 0,1 9.5,5.8C11.54,5.8 13.2,7.46 13.2,9.5C13.2,10.47 12.82,11.34 12.21,12H18M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
-              </svg>
-              <span class="absolute fw5" style="margin: 3px 0 0 6px;">Skills</span>
-            </h1>
-            <ul class="f6 fw4 black lh-copy mv0 measure" style="padding-left: 29px;">
-              <li>Facilitating user interviews</li>
-              <li>Defining user personas and user journeys</li>
-              <li>Creating and validating prototypes</li>
-              <li>UI &amp; interaction design</li>
-              <li>Usability testing</li>
-              <li>CSS, SASS, Javascript, Ruby on Rails</li>
-            </ul>
+      <!-- Small -->
+      <div class="d-block d-md-none" style="margin-left: auto; margin-right: auto; box-sizing: border-box;">
+        <div class="row no-gutters d-flex align-items-center text-center mt-4">
+          <div class="col">
+
+            <h2 class="h1 font-weight-bold">Need help designing an app?</h2>
+            <div class="row">
+              <div class="col-lg-6 mx-auto">
+                <p class="libre lead mt-3 font-weight-normal text-body">
+                  Hi, I’m Kevin. I’m a freelance designer & developer. I help companies grow their businesses by designing digital products that users love.
+                </p>
+                <a class="btn btn-primary mt-2 shadow-sm" href="contact.html">
+                  Contact me
+                  <div class="arrow-light ml-2"></div>
+                </a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="mt-2">
+              <svg class="bd-placeholder-img rounded mr-2" width="8" height="8" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><circle cx="4" cy="4" r="4" fill="#28a745" /></svg>
+              <span style="font-size: 12px; margin-left: -4px; color: #28a745;">Available for new projects</span>
+            </div>
           </div>
-          <div class="fl w-50">
-            <h1 class="f6 fw4 lh-title black-60 mb2 ttu relative">
-              <svg style="width:24px;height:24px;margin-left:-2px;" viewBox="0 0 24 24">
-                <path fill="#666666" d="M11,6.5V9.33L8.33,12L11,14.67V17.5L5.5,12M13,6.43L18.57,12L13,17.57V14.74L15.74,12L13,9.26M5,3C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3H5Z" />
-              </svg>
-              <span class="absolute fw5" style="margin: 3px 0 0 6px;">Tools</span>
-            </h1>
-            <ul class="f6 fw4 black lh-copy mv0 measure" style="padding-left: 29px;">
-              <li>UI: Sketch / Figma / Adobe Creative Suite</li>
-              <li>Prototyping: Invision / Framer.js</li>
-              <li>Version control: Git / Abstract</li>
-              <li>Project management: JIRA / Pivotal Tracker / Trello</li>
-              <li>Spec: Zeplin</li>
-              <li>Quantitative data: Google Analytics, Appsee</li>
-            </ul>
+
+        </div>
+      </div>
+
+      <!-- Regular -->
+      <div class="d-none d-md-block" style="margin-left: auto; margin-right: auto; box-sizing: border-box; padding: 35px 0;">
+        <div class="container">
+          <div class="row no-gutters d-flex align-items-center">
+            <div class="col">
+              <div class="bg-white rounded-lg shadow" style="width: 120%; margin-right: -20%; z-index: 10; padding: 65px; position: relative;">
+                <h1 class="font-weight-bold text-body" style="font-size: calc(16px + 1.5vw);">
+                  Need help<br />
+                  <span class="position-relative">designing an app?
+                    <img src="img/underline.svg" class="position-absolute w-100" style="left: 0px; right: 0px; top: 1.1em; transform: translateY(0px);">
+                  </span>
+                </h1>
+                <p class="libre mt-5 font-weight-normal text-body" style="font-size: calc(14px + .3vw); line-height: 1.875rem;">
+                  Hi, I’m Kevin. I’m a freelance designer & developer who helps companies grow their businesses by designing digital products that users love.
+                </p>
+                <a class="btn btn-primary mt-3 shadow-sm px-4 py-2" href="contact.html">
+                  Contact me
+                  <div class="arrow-light ml-2"></div>
+                </a>
+
+                <br />
+
+                <div class="mt-2">
+                  <svg class="bd-placeholder-img rounded mr-2" width="8" height="8" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><circle cx="4" cy="4" r="4" fill="#28a745" /></svg>
+                  <span style="font-size: 12px; margin-left: -4px; color: #28a745;">Available for new projects</span>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="aspect-ratio aspect-ratio--4x6 mb4">
+                <div class="aspect-ratio--object rounded-lg shadow" style="background:url(img/me_large.jpg) center; background-size: cover; background-repeat: no-repeat; left: 0px; top: 0.12px; position: absolute; width: 100% !important; height: auto !important;"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-    </div>
-  </article>
-</div>
+      <div id="portfolio" class="clients container">
+        <div class="text-center">
+          <h2 class="h1 font-weight-bold">Portfolio</h2>
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <p class="libre lead mt-3 font-weight-normal text-body">
+                I've launched and scaled web and mobile products for startups and enterprise companies.
+              </p>
+            </div>
+          </div>
+        </div>
 
-<div id="case-studies" class="pa3 pb0 mt6">
-  <article class="mw7 center">
-    <h4 class="w-100 f6 ttu bg-gold pb1 pt4 ph2 white fw4 br1 dib v-mid mv0 mr3">Case Studies</h4>
+        <h6 class="text-center mt-5 text-uppercase text-muted">Some companies I've worked with</h6>
+        <ul class="clients-list list-inline mx-auto text-center" style="margin: 30px 0 70px;">
+          <li class="list-inline-item"><img src="img/companies/harvard.png" alt="" class="img-fluid"></li>
+          <li class="list-inline-item"><img src="img/companies/expressscripts.png" alt="" class="img-fluid"></li>
+          <li class="list-inline-item"><img src="img/companies/benchsentry.png" alt="" class="img-fluid"></li>
+          <br />
+          <li class="list-inline-item"><img src="img/companies/pivotal.png" alt="" class="img-fluid"></li>
+          <li class="list-inline-item"><img src="img/companies/partners.png" alt="" class="img-fluid"></li>
+          <li class="list-inline-item"><img src="img/companies/johnhancock.png" alt="" class="img-fluid"></li>
+          <li class="list-inline-item"><img src="img/companies/bostonscientific.png" alt="" class="img-fluid"></li>
+        </ul>
 
-    <div class="mt3 mb0 ph2">
-      <h1 class="f5 fw3 lh-copy">For more examples of recent case studies, please reach me at <a class="link dim blue" href="mailto:kevinjhc@gmail.com">kevinjhc@gmail.com</a>.</h1>
+        <div class="row mx-auto">
+          <div class="container">
 
-        <div class="w-100 pa0">
-        <section class="w-100 pa0 pt0">
-          <article class="bb b--black-10">
-            <a class="db pv3 no-underline black dim" href="work/messaging.html">
-              <div class="flex flex-column flex-row-ns">
-                <div class="w-100 w-50-ns pr3-ns">
-                  <img src="images/ic_hudl.png" class="db br2 w2 h2"/>
-                  <h1 class="f5 mt3 lh-title">Hudl Messaging</h1>
-                  <p class="f6 lh-copy">
-                    I led the design for Hudl Messaging, which facilitates communication between coaches and athletes.
+            <div class="row mb-sm-2 mb-md-4">
+              <div class="card-deck">
+                <a href="benchsentry.html" class="card hover-shadow-sm text-decoration-none text-body overflow-hidden border-0" style="background: #fff;">
+                  <div class="card-body px-5 pt-5" style="z-index: 1;">
+
+                    <div class="text-decoration-none text-dark media mb-2">
+                      <img class="bd-placeholder-img mr-2 rounded-lg" width="30" height="30"  src="img/companies/icon_benchsentry.png">
+                      <p class="mb-0 lh-125">
+                        <p class="text-uppercase font-weight-bold text-muted mb-1"><small>BenchSentry</small></p>
+                      </p>
+                    </div>
+
+                    <h2 class="card-title font-weight-bold">Reducing delivery theft</h2>
+                    <p class="card-text libre">BenchSentry is an IoT lock box you leave on your porch to protect your deliveries. I was hired to design their iOS, Android, and Raspberry Pi-enabled apps.</p>
+
+                    <div class="btn p-0">
+                      Read more
+                      <div class="arrow ml-2"></div>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/benchsentry_1.png" class="card-img-top" alt="...">
+                </a>
+
+                <a href="hudl.html" class="card hover-shadow-sm text-decoration-none text-body overflow-hidden border-0" style="background: #fff;">
+                  <div class="card-body px-5 pt-5" style="z-index: 1;">
+
+                    <div class="text-decoration-none text-dark media mb-2">
+                      <img class="bd-placeholder-img mr-2 rounded-lg" width="30" height="30"  src="img/companies/icon_hudl.png">
+                      <p class="mb-0 lh-125">
+                        <p class="text-uppercase font-weight-bold text-muted mb-1"><small>Hudl</small></p>
+                      </p>
+                    </div>
+
+                    <h2 class="card-title font-weight-bold">A better way for sports teams to communicate</h2>
+                    <p class="card-text libre">I led the design for messaging features at Hudl, which allow coaches and athletes to send messages and videos to each other.</p>
+
+                    <div class="btn p-0">
+                      Read more
+                      <div class="arrow ml-2"></div>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/hudl_1.png" class="card-img-top" alt="...">
+                </a>
+
+              </div>
+            </div>
+
+            <div class="row mb-sm-2 mb-md-4">
+
+              <div class="card-deck">
+                <a href="harvard.html" class="card hover-shadow-sm text-decoration-none text-body overflow-hidden border-0 bg-white">
+                  <div class="card-body px-5 pt-5" style="z-index: 1;">
+
+                    <div class="text-decoration-none text-dark media mb-2">
+                      <img class="bd-placeholder-img mr-2 rounded-lg" width="30" height="30"  src="img/companies/icon_harvard.png">
+                      <p class="mb-0 lh-125">
+                        <p class="text-uppercase font-weight-bold text-muted mb-1"><small>Harvard Medical</small></p>
+                      </p>
+                    </div>
+
+                    <h2 class="card-title font-weight-bold">Improving the way chemists analyze their data</h2>
+                    <p class="card-text libre">I designed and developed a web app for chemists to better understand the relationships between hosts and bacteria.</p>
+
+                    <div class="btn p-0">
+                      Read more
+                      <div class="arrow ml-2"></div>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/harvard_1.png" class="card-img-top" alt="...">
+                </a>
+
+                <a href="ubersense.html" class="card hover-shadow-sm text-decoration-none text-body overflow-hidden border-0 bg-white">
+                  <div class="card-body px-5 pt-5" style="z-index: 1;">
+
+                    <div class="text-decoration-none text-dark media mb-2">
+                      <img class="bd-placeholder-img mr-2 rounded-lg" width="30" height="30"  src="img/companies/icon_ubersense.png">
+                      <p class="mb-0 lh-125">
+                        <p class="text-uppercase font-weight-bold text-muted mb-1"><small>Ubersense</small></p>
+                      </p>
+                    </div>
+
+                    <h2 class="card-title font-weight-bold">Helping athletes improve using slow motion video</h2>
+                    <p class="card-text libre">I led the design for Ubersense, an iOS and Android app that lets athletes to record themselves in slow motion and use analysis tools to help them improve.</p>
+
+                    <div class="btn p-0">
+                      Read more
+                      <div class="arrow ml-2"></div>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/ubersense_1.png" class="card-img-top" alt="...">
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-6 mx-auto text-center mt-5">
+          <a class="btn btn-primary mt-5 shadow-sm px-4 py-2" href="portfolio.html">
+            View more work
+            <div class="arrow-light ml-2"></div>
+          </a>
+        </div> -->
+      </div>
+
+      <div id="services" class="clients container">
+        <div class="text-center mb-5">
+          <h2 class="h1 font-weight-bold">How can I help you?</h2>
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <p class="libre lead mt-3 font-weight-normal text-body">
+                I'll partner with you to deliver exceptional digital product design from inception to launch.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-lg-8 mx-auto">
+
+            <div class="row">
+              <div class="col">
+                <div class="border mb-4 rounded border-dark">
+                  <h1 class="h5 skills-header">
+                    Design
+                  </h1>
+                  <div class="px-4 py-0 pt-3">
+                    <ul class="libre list-unstyled mt-3 mb-4">
+                      <li class="mb-3">Design Audits</li>
+                      <li class="mb-3">User Research & Usability Testing</li>
+                      <li class="mb-3">Interactive Prototypes</li>
+                      <li class="mb-3">UI/UX Design</li>
+                      <li class="mb-3">Style Guides & Design Systems</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="border border-dark mb-4 rounded">
+                  <h1 class="h5 skills-header">
+                    Development
+                  </h1>
+                  <div class="px-4 py-0 pt-3">
+                    <ul class="libre list-unstyled mt-3 mb-4">
+                      <li class="mb-3">Ruby on Rails</li>
+                      <li class="mb-3">HTML / CSS / Javascript</li>
+                      <li class="mb-3">D3 data visualizations</li>
+                      <li class="mb-3">Code prototypes</li>
+                      <li class="mb-3">Wordpress development</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+
+
+
+        <div class="container">
+
+          <div class="row mb-sm-2 mb-md-4">
+
+            <div class="card-deck">
+              <div class="card text-decoration-none text-body overflow-hidden border-0 bg-white">
+                <div class="card-body p-5">
+
+                  <div class="text-decoration-none text-dark media my-0 mr-md-auto">
+                    <div class="mr-3 rounded-lg d-flex justify-content-center d-flex align-items-center bg-dark h4" style="width: 52px; height: 52px; color: #fff" class="mr-3 rounded-lg">
+                      1
+                    </div>
+                    <p class="h4 media-body mb-0 lh-125">
+                      <span class="d-block font-weight-bold text-gray-dark">Design Audits</span>
+                      <span class="h6 text-muted">1 - 2 weeks</span>
+                    </p>
+                  </div>
+
+                  <p class="libre mt-5">
+                    Does your team need an outside perspective? Are you struggling to understand why your product isn’t converting users?
                   </p>
-                  <p class="f6 lh-copy mv0">Read more →</p>
-                </div>
-                <div class="pl3-ns mb2 mt3 mt0-ns mb0-ns w-100 w-50-ns">
-                  <img src="images/work/messaging_web.png" class="db br2">
+
+                  <ul class="list-unstyled mt-3 mb-0 libre">
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>I'll identify your product's UX can be improved by providing specific recommendations.</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>The topics I'll address include: usability, user flows, visual design, copywriting, and information architecture.</span>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
-            </a>
-          </article>
-        </section>
 
-        <section class="w-100 pa0">
-          <article class="bb b--black-10">
-            <a class="db pv3 no-underline black dim" href="work/accessibility.html">
-              <div class="flex flex-column flex-row-ns">
-                <div class="w-100 w-50-ns pr3-ns">
-                  <img src="images/ic_hudl.png" class="db br2 w2 h2"/>
-                  <h1 class="f5 mt3 lh-title">Design Details: Typography</h1>
-                  <p class="f6 lh-copy">
-                    I observed users using the Hudl app and changed the typography to make the app more accessible.
+              <div class="card text-decoration-none text-body overflow-hidden border-0 bg-white">
+                <div class="card-body p-5">
+
+                  <div class="text-decoration-none text-dark media my-0 mr-md-auto">
+                    <div class="mr-3 rounded-lg d-flex justify-content-center d-flex align-items-center bg-dark h4" style="width: 52px; height: 52px; color: #fff" class="mr-3 rounded-lg">
+                      2
+                    </div>
+                    <p class="h4 media-body mb-0 lh-125">
+                      <span class="d-block font-weight-bold text-gray-dark">User Research & Usability Testing</span>
+                      <span class="h6 text-muted">2 - 6 weeks</span>
+                    </p>
+                  </div>
+
+                  <p class="libre mt-5">
+                    Are you targeting the right users? How do your users actually use your product? Improve your designs by understanding your users' goals and behaviors and seeing how they interact with your products.
                   </p>
-                  <p class="f6 lh-copy mv0">Read more →</p>
-                </div>
-                <div class="pl3-ns mb2 mt3 mt0-ns mb0-ns w-100 w-50-ns">
-                  <img src="images/work/accessibility_baseline.png" class="db br2">
+
+                  <ul class="list-unstyled mt-3 mb-0 libre">
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>I’ll create and execute research plans to help you learn more about your existing and prospective users.</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>I'll help you interpret the research insights and help you prioritize which ones to focus on.</span>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
-            </a>
-          </article>
-        </section>
+            </div>
 
-        <section class="w-100 pa0">
-          <article class="bb b--black-10">
-            <a class="db pv3 no-underline black dim" href="work/ubersense.html">
-              <div class="flex flex-column flex-row-ns">
-                <div class="w-100 w-50-ns pr3-ns">
-                  <img src="images/ic_ubersense.png" style="background-color: #c0392b;" class="db br2 w2 h2"/>
-                  <h1 class="f5 mt3 lh-title">Design Details: Mobile Dropdown</h1>
-                  <p class="f6 lh-copy">
-                    On when "best practices" should be understood within the context of your target users.
+          </div>
+
+          <div class="row mb-sm-2 mb-md-4">
+
+            <div class="card-deck">
+              <div class="card text-decoration-none text-body overflow-hidden border-0 bg-white">
+                <div class="card-body p-5">
+
+                  <div class="text-decoration-none text-dark media my-0 mr-md-auto">
+                    <div class="mr-3 rounded-lg d-flex justify-content-center d-flex align-items-center bg-dark h4" style="width: 52px; height: 52px; color: #fff" class="mr-3 rounded-lg">
+                      3
+                    </div>
+                    <p class="h4 media-body mb-0 lh-125">
+                      <span class="d-block font-weight-bold text-gray-dark">Interactive Prototypes</span>
+                      <span class="h6 text-muted">1 - 3 weeks</span>
+                    </p>
+                  </div>
+
+                  <p class="libre mt-5">
+                    Do you have an idea that you want to validate before committing resources to building it? Do you have multiple designs that you want to compare?
                   </p>
-                  <p class="f6 lh-copy mv0">Read more →</p>
-                </div>
-                <div class="pl3-ns mb2 mt3 mt0-ns mb0-ns w-100 w-50-ns">
-                  <div style="background-image: url(images/work/technique.jpg); height:100%; background-position: center; background-size: contain; background-repeat: no-repeat;" class="w-100 db br2"></div>
-                </div>
-              </div>
-            </a>
-          </article>
-        </section>
 
-        <section class="w-100 pa0 mb4">
-          <article>
-            <a class="db pv3 no-underline black dim" href="work/code.html">
-              <div class="flex flex-column flex-row-ns">
-                <div class="w-100 pr3-ns">
-                  <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g fill="#666666" fill-rule="nonzero">
-                          <path d="M14.2222222,6.22222222 L14.2222222,11.2533333 L9.47555556,16 L14.2222222,20.7466667 L14.2222222,25.7777778 L4.44444444,16 L14.2222222,6.22222222 Z M17.7777778,6.09777778 L27.68,16 L17.7777778,25.9022222 L17.7777778,20.8711111 L22.6488889,16 L17.7777778,11.1288889 L17.7777778,6.09777778 Z M3.55555556,0 C1.58222222,0 0,1.6 0,3.55555556 L0,28.4444444 C0,30.4081236 1.59187645,32 3.55555556,32 L28.4444444,32 C30.4081236,32 32,30.4081236 32,28.4444444 L32,3.55555556 C32,1.59187645 30.4081236,0 28.4444444,0 L3.55555556,0 Z"></path>
-                        </g>
-                    </g>
-                  </svg>
-                  <h1 class="f5 mt3 lh-title">Collection of code snippets</h1>
-                  <p class="f6 lh-copy mv0">View snippets →</p>
+                  <ul class="list-unstyled mt-3 mb-0 libre">
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>I'll create prototypes that you can use to get feedback from users.</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>The level of fidelity depends on your needs -- from low fidelity sketches to high fidelity codes prototypes with mock data.</span>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
-            </a>
-          </article>
-        </section>
-      </div>
-    </div>
-  </article>
-</div>
 
-<div id="talks" class="pa3 pb0 mt6">
-  <article class="mw7 center">
-    <h4 class="w-100 f6 ttu bg-green pb1 pt4 ph2 white fw4 br1 dib v-mid mv0 mr3">Talks & Workshops I've given</h4>
+              <div class="card text-decoration-none text-body overflow-hidden border-0 bg-white">
+                <div class="card-body p-5">
 
-    <div class="mb0 ph2">
-      <div class="w-100 pa0">
-        <div class="w-100 pa0">
-          <div class="cf">
-            <div class="fl w-100 w-50-ns ph2 ph0-ns">
-              <div class="mt3">
-                <a href="talks/interviews.html" class="link dim dt">
-                  <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g fill="#357EDD" fill-rule="nonzero">
-                            <path d="M5.33333333,24.8888889 C5.33333333,21.3333333 12.4444444,19.3777778 16,19.3777778 C19.5555556,19.3777778 26.6666667,21.3333333 26.6666667,24.8888889 L26.6666667,26.6666667 L5.33333333,26.6666667 L5.33333333,24.8888889 Z M21.3333333,10.6666667 C21.3333333,13.6121853 18.9455187,16 16,16 C13.0544813,16 10.6666667,13.6121853 10.6666667,10.6666667 C10.6666667,7.721148 13.0544813,5.33333333 16,5.33333333 C18.9455187,5.33333333 21.3333333,7.721148 21.3333333,10.6666667 Z M0,3.55555556 L0,28.4444444 C0,30.4081236 1.59187645,32 3.55555556,32 L28.4444444,32 C30.4081236,32 32,30.4081236 32,28.4444444 L32,3.55555556 C32,1.59187645 30.4081236,0 28.4444444,0 L3.55555556,0 C1.58222222,0 0,1.6 0,3.55555556 Z"></path>
-                        </g>
-                    </g>
-                  </svg>
-                  <div class="dtc v-mid pl3">
-                    <h1 class="f6 fw4 lh-copy black mv0">User Interviews 101 Workshop →</h1>
+                  <div class="text-decoration-none text-dark media my-0 mr-md-auto">
+                    <div class="mr-3 rounded-lg d-flex justify-content-center d-flex align-items-center bg-dark h4" style="width: 52px; height: 52px; color: #fff" class="mr-3 rounded-lg">
+                      4
+                    </div>
+                    <p class="h4 media-body mb-0 lh-125">
+                      <span class="d-block font-weight-bold text-gray-dark">UI / UX Design</span>
+                      <span class="h6 text-muted">2 weeks - 6 months</span>
+                    </p>
                   </div>
-                </a>
-              </div>
-              <div class="mt2">
-                <a href="talks/prototype.html" class="link dim dt">
-                  <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g fill="#A463F2" fill-rule="nonzero">
-                            <path d="M0,0 L0,5.81818182 L1.45454545,5.81818182 L1.45454545,26.1818182 L0,26.1818182 L0,32 L5.81818182,32 L5.81818182,30.5454545 L26.1818182,30.5454545 L26.1818182,32 L32,32 L32,26.1818182 L30.5454545,26.1818182 L30.5454545,5.81818182 L32,5.81818182 L32,0 L26.1818182,0 L26.1818182,1.45454545 L5.81818182,1.45454545 L5.81818182,0 M5.81818182,4.36363636 L26.1818182,4.36363636 L26.1818182,5.81818182 L27.6363636,5.81818182 L27.6363636,26.1818182 L26.1818182,26.1818182 L26.1818182,27.6363636 L5.81818182,27.6363636 L5.81818182,26.1818182 L4.36363636,26.1818182 L4.36363636,5.81818182 L5.81818182,5.81818182 M7.27272727,7.27272727 L7.27272727,18.9090909 L11.6363636,18.9090909 L11.6363636,24.7272727 L24.7272727,24.7272727 L24.7272727,11.6363636 L18.9090909,11.6363636 L18.9090909,7.27272727 M10.1818182,10.1818182 L16,10.1818182 L16,16 L10.1818182,16 M18.9090909,14.5454545 L21.8181818,14.5454545 L21.8181818,21.8181818 L14.5454545,21.8181818 L14.5454545,18.9090909 L18.9090909,18.9090909"></path>
-                        </g>
-                    </g>
-                  </svg>
-                  <div class="dtc v-mid pl3">
-                    <h1 class="f6 fw4 lh-copy black mv0">Choosing Prototype Fidelity →</h1>
-                  </div>
-                </a>
+
+                  <p class="libre mt-5">
+                    Looking for a full-service designer?
+                  </p>
+
+                  <ul class="list-unstyled mt-3 mb-0 libre">
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>I'll work with you from beginning to end by taking product requirements and turning them into user flows, wireframes and high-fidelity UI.</span>
+                    </li>
+                  </ul>
+
+                </div>
               </div>
             </div>
-            <div class="fl w-100 w-50-ns ph2 ph0-ns">
-              <div class="mt3">
-                <a href="talks/css.html" class="link dim dt">
-                  <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g fill="#19A974" fill-rule="nonzero">
-                          <path d="M14.2222222,6.22222222 L14.2222222,11.2533333 L9.47555556,16 L14.2222222,20.7466667 L14.2222222,25.7777778 L4.44444444,16 L14.2222222,6.22222222 Z M17.7777778,6.09777778 L27.68,16 L17.7777778,25.9022222 L17.7777778,20.8711111 L22.6488889,16 L17.7777778,11.1288889 L17.7777778,6.09777778 Z M3.55555556,0 C1.58222222,0 0,1.6 0,3.55555556 L0,28.4444444 C0,30.4081236 1.59187645,32 3.55555556,32 L28.4444444,32 C30.4081236,32 32,30.4081236 32,28.4444444 L32,3.55555556 C32,1.59187645 30.4081236,0 28.4444444,0 L3.55555556,0 Z"></path>
-                        </g>
-                    </g>
-                  </svg>
-                  <div class="dtc v-mid pl3">
-                    <h1 class="f6 fw4 lh-copy black mv0">Intro to CSS Workshop →</h1>
+
+          </div>
+
+          <div class="row mb-sm-2 mb-md-4">
+            <div class="card-deck">
+              <div class="card text-decoration-none text-body overflow-hidden border-0 bg-white">
+                <div class="card-body p-5">
+
+                  <div class="text-decoration-none text-dark media my-0 mr-md-auto">
+                    <div class="mr-3 rounded-lg d-flex justify-content-center d-flex align-items-center bg-dark h4" style="width: 52px; height: 52px; color: #fff" class="mr-3 rounded-lg">
+                      5
+                    </div>
+                    <p class="h4 media-body mb-0 lh-125">
+                      <span class="d-block font-weight-bold text-gray-dark">Style Guides & Design Systems</span>
+                      <span class="h6 text-muted">1 - 6 months</span>
+                    </p>
                   </div>
-                </a>
+
+                  <p class="libre mt-5">
+                    Do you need help creating consistency in your designs?
+                  </p>
+
+                  <ul class="list-unstyled mt-3 mb-0 libre">
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>I'll help you create reusable systems so that your designers can create a cohesive product together.</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>I'll help you bridge the gap between designers and developers by creating a vanilla HTML/CSS/JS or React-based design system.</span>
+                    </li>
+                  </ul>
+
+                </div>
               </div>
-              <div class="mt2">
-                <a href="talks/feedback.html" class="link dim dt">
-                  <svg class="dtc w2 v-mid" width="32px" height="32px" viewBox="0 0 32 32">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g fill="#FF80CC" fill-rule="nonzero">
-                            <path d="M11.2,32 C10.3163444,32 9.6,31.2836556 9.6,30.4 L9.6,25.6 L3.2,25.6 C1.4326888,25.6 0,24.1673112 0,22.4 L0,3.2 C0,1.424 1.44,0 3.2,0 L28.8,0 C30.5673112,0 32,1.4326888 32,3.2 L32,22.4 C32,24.1673112 30.5673112,25.6 28.8,25.6 L19.04,25.6 L13.12,31.536 C12.8,31.84 12.4,32 12,32 L11.2,32 Z M22.4,19.2 L22.4,17.6 C22.4,15.472 18.128,14.4 16,14.4 C13.872,14.4 9.6,15.472 9.6,17.6 L9.6,19.2 L22.4,19.2 Z M16,6.4 C14.2326888,6.4 12.8,7.8326888 12.8,9.6 C12.8,11.3673112 14.2326888,12.8 16,12.8 C17.7673112,12.8 19.2,11.3673112 19.2,9.6 C19.2,7.8326888 17.7673112,6.4 16,6.4 Z"></path>
-                        </g>
-                    </g>
-                  </svg>
-                  <div class="dtc v-mid pl3">
-                    <h1 class="f6 fw4 lh-copy black mv0">Giving Feedback Talk →</h1>
+
+              <div class="card text-decoration-none text-body overflow-hidden border-0 bg-white">
+                <div class="card-body p-5">
+
+                  <div class="text-decoration-none text-dark media my-0 mr-md-auto">
+                    <div class="mr-3 rounded-lg d-flex justify-content-center d-flex align-items-center bg-dark h4" style="width: 52px; height: 52px; color: #fff" class="mr-3 rounded-lg">
+                      6
+                    </div>
+                    <p class="h4 media-body mb-0 lh-125">
+                      <span class="d-block font-weight-bold text-gray-dark">Development</span>
+                      <span class="h6 text-muted">3 weeks +</span>
+                    </p>
                   </div>
-                </a>
+
+                  <p class="libre mt-5">
+                    Whether it's creating code prototypes or creating an MVP product, I'll help you turn designs into a coded product that users can use.
+                  </p>
+
+                  <ul class="list-unstyled mt-3 mb-0 libre">
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>Ruby on Rails</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>HTML / CSS / Javascript</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>D3 data visualizations</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>Code prototypes</span>
+                    </li>
+                    <li class="d-flex">
+                      <div class="icon-round mr-2">
+                        →
+                      </div>
+                      <span>Wordpress development</span>
+                    </li>
+                  </ul>
+
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-</div>
 
-<div id="process" class="pa3 pb0 mt6">
-  <article class="mw7 center">
-    <h4 class="w-100 f6 ttu bg-purple pb1 pt4 ph2 white fw4 br1 dib v-mid mv0 mr3">Product Design Process</h4>
-
-    <div class="w-100 pa0 pt2 ph2">
-      <div class="cf">
-        <div class="fl w-100 w-50-ns pr2-ns">
-
-          <div class="flex mt3">
-            <div class="fl w2 h2">
-              <span class="step bg-dark-red">1</span>
-            </div>
-            <div class="fl w-80">
-              <h4 class="f6 fw7 lh-title dark-red mt1 mb0 mr2 ttu">Understand and align on goals</h4>
-
-              <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
-              <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
-                <li>Understand business, product, technical goals</li>
-                <li>Stakeholder map exercise</li>
-                <li>Risks and mitigations exercise</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="flex mt3">
-            <div class="fl w2 h2">
-              <span class="step bg-dark-pink">2</span>
-            </div>
-            <div class="fl w-80">
-              <h4 class="f6 fw7 lh-title dark-pink mt1 mb0 mr2 ttu">User research</h4>
-
-              <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
-              <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
-                <li>Exploratory interviews</li>
-                <li>Proto-personas</li>
-                <li>Day-in-the-life / user scenarios</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="flex mt4">
-            <div class="fl w2 h2">
-              <span class="step bg-orange">3</span>
-            </div>
-            <div class="fl w-80">
-              <h4 class="f6 fw7 lh-title orange mb0 mr2 ttu" style="margin-top: -5px;">Brainstorm how to solve the user’s needs</h4>
-
-              <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
-              <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
-                <li>Design studio</li>
-                <li>Create wireframes and prototypes</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="fl w-100 w-50-ns">
-
-          <div class="flex mt3">
-            <div class="fl w2 h2">
-              <span class="step bg-pink">4</span>
-            </div>
-            <div class="fl w-80">
-              <h4 class="f6 fw7 lh-title pink mb0 mr2 ttu" style="margin-top: -5px;">Validate whether solution concepts meet users' needs</h4>
-
-              <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
-              <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
-                <li>Low-fidelity UI</li>
-                <li>Test prototypes and get user feedback</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="flex mt4">
-            <div class="fl w2 h2">
-              <span class="step bg-blue">5</span>
-            </div>
-            <div class="fl w-80">
-              <h4 class="f6 fw7 lh-title blue mb0 mr2 ttu" style="margin-top: -5px;">Identify MVP to start building product</h4>
-
-              <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
-              <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
-                <li>High-fidelity UI</li>
-                <li>Beta release plans</li>
-                <li>Assumptions tracker</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="flex mt4">
-            <div class="fl w2 h2">
-              <span class="step bg-green">6</span>
-            </div>
-            <div class="fl w-80">
-              <h4 class="f6 fw7 lh-title green mb0 mr2 ttu" style="margin-top: -5px;">Build and release product iteratively</h4>
-
-              <h1 class="f6 fw7 lh-title black mt3 mb0">Methods:</h1>
-              <ul class="f6 fw4 pl4 lh-copy black mv0 measure">
-                <li>Continue to meet with users</li>
-                <li>Increase design fidelity by creating a style guide</li>
-              </ul>
-            </div>
           </div>
 
         </div>
-      </div>
-    </div>
 
-  </article>
-</div>
 
-<div class="pa3 mt1">
-  <article class="mw7 center">
 
-    <div class="cf mt2">
-      <div class="fl w-50-ns w-100 w-100-m pt1">
-        <div class="br2 pa3 ma2 bw1 ba" style="border-color: #fb8332;">
-            <svg width="20px" height="20px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g fill="#fb8332">
-                        <polygon points="14 8.78 18.24 1.45 19.97 2.45 14.74 11.5 8.23 7.75 3.46 16 20 16 20 18 0 18 0 0 2 0 2 14.54 7.5 5"></polygon>
-                    </g>
-                </g>
-            </svg>
-            <p class="f6 mt2 mb1 fw7 lh-title ttu" style="color: #fb8332;">Strive for quality</p>
-          <h1 class="f6 fw4 lh-copy mv0" style="color: #fb8332;">Product designers should pore over each detail and ensure that the team strives for high quality design work.</h1>
+        <div class="col-lg-6 mx-auto text-center mt-5">
+          <p class="libre lead mt-3 font-weight-normal text-body">
+            Does your project have different needs?<br />
+            Let's get in touch so we can work together.
+          </p>
+          <a class="btn btn-primary mt-2 shadow-sm px-4 py-2" href="mailto:kevinjhc@gmail.com">
+            Email me directly
+            <div class="arrow-light ml-2"></div>
+          </a>
         </div>
       </div>
 
-      <div class="fl w-50-ns w-100 w-100-m pt1">
-        <div class="br2 pa3 ma2 bw1 ba" style="border-color: #1b96f1;">
-            <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <path d="M10,4.4408921e-16 C4.47,4.4408921e-16 0,4.5 0,10 C-2.22044605e-16,12.6521649 1.0535684,15.195704 2.92893219,17.0710678 C4.80429597,18.9464316 7.3478351,20 10,20 C15.5228475,20 20,15.5228475 20,10 C20,7.3478351 18.9464316,4.80429597 17.0710678,2.92893219 C15.195704,1.0535684 12.6521649,2.22044605e-16 10,0 Z M13.6,6.34 C14.67,6.34 15.53,7.2 15.53,8.27 C15.53,9.34 14.67,10.2 13.6,10.2 C12.5340904,10.2 11.67,9.33590957 11.67,8.27 C11.66,7.2 12.53,6.34 13.6,6.34 Z M7.6,4.76 C8.9,4.76 9.96,5.82 9.96,7.12 C9.96,8.42 8.9,9.5 7.6,9.5 C6.3,9.5 5.24,8.42 5.24,7.12 C5.24,5.81 6.29,4.76 7.6,4.76 Z M7.6,13.89 L7.6,17.64 C5.2,16.89 3.3,15.04 2.46,12.68 C3.5,11.56 6.13,11 7.6,11 C8.13,11 8.8,11.07 9.5,11.21 C7.86,12.08 7.6,13.23 7.6,13.89 Z M10,18 C9.72,18 9.46,18 9.2,17.96 L9.2,13.89 C9.2,12.47 12.14,11.76 13.6,11.76 C14.67,11.76 16.5,12.15 17.44,12.91 C16.27,15.88 13.38,18 10,18 Z" id="Shape" fill="#1b96f1" fill-rule="nonzero"></path>
-                </g>
-            </svg>
-            <p class="f6 mt2 mb1 fw7 lh-title ttu" style="color: #1b96f1;">User Centered Design</p>
-          <h1 class="f6 fw4 lh-copy mv0" style="color: #1b96f1;">Product designers should be in close contact with users and advocate for their needs to ensure that valuable software is being built.</h1>
-        </div>
-      </div>
-    </div>
 
-    <div class="cf">
-      <div class="fl w-50-ns w-100 w-100-m pt1">
-        <div class="br2 pa3 ma2 bw1 ba" style="border-color: #b620e0;">
-            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <path d="M19,10 L22,10 L22,12 L19,12 L19,10 Z M0,10 L3,10 L3,12 L0,12 L0,10 Z M12,0 L12,3 L10,3 L10,0 L12,0 Z M3.92,2.5 L6.05,4.64 L4.63,6.05 L2.5,3.93 L3.92,2.5 Z M15.95,4.63 L18.07,2.5 L19.5,3.93 L17.37,6.05 L15.95,4.63 Z M11,5 C14.3137085,5 17,7.6862915 17,11 C17,13.22 15.79,15.16 14,16.2 L14,18 C14,18.5522847 13.5522847,19 13,19 L9,19 C8.44771525,19 8,18.5522847 8,18 L8,16.2 C6.21,15.16 5,13.22 5,11 C5,7.6862915 7.6862915,5 11,5 Z M13,20 L13,21 C13,21.5522847 12.5522847,22 12,22 L10,22 C9.44771525,22 9,21.5522847 9,21 L9,20 L13,20 Z M10,17 L12,17 L12,14.87 C13.73,14.43 15,12.86 15,11 C15,8.790861 13.209139,7 11,7 C8.790861,7 7,8.790861 7,11 C7,12.86 8.27,14.43 10,14.87 L10,17 Z" id="Shape" fill="#b620e0" fill-rule="nonzero"></path>
-                </g>
-            </svg>
-            <p class="f6 mt2 mb1 fw7 lh-title ttu" style="color: #b620e0;">Build the right thing</p>
-          <h1 class="f6 fw4 lh-copy mv0" style="color: #b620e0;">Features should be built incrementally and released early and often to ensure that product assumptions are being validated by actual users.</h1>
+      <div class="clients container">
+        <div class="text-center">
+          <h2 class="h1 font-weight-bold">Have a project in mind?</h2>
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <p class="libre lead mt-3 font-weight-normal text-body">
+                Let's schedule a quick call so I can better understand your needs and work towards the right solution.
+              </p>
+
+              <a class="btn btn-primary mt-2 shadow-sm px-4 py-2" href="contact.html">
+                Contact me
+                <div class="arrow-light ml-2"></div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="fl w-50-ns w-100 w-100-m pt1">
-        <div class="br2 pa3 ma2 bw1 ba" style="border-color: #19A974;">
-            <svg width="20px" height="22px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <path d="M7,11 L7,18 L0,18 L0,16 L3.57,16 C2,14.3 1,12 1,9.5 C1,4.25329488 5.25329488,1.33226763e-15 10.5,0 C13.0195567,-8.8817842e-16 15.4359188,1.00088998 17.2175144,2.78248558 C18.99911,4.56408117 20,6.98044335 20,9.5 C20,12.0195567 18.99911,14.4359188 17.2175144,16.2175144 C15.4359188,17.99911 13.0195567,19 10.5,19 L10,19 L10,17 L10.5,17 C14.6421356,17 18,13.6421356 18,9.5 C18,5.35786438 14.6421356,2 10.5,2 C6.35786438,2 3,5.35786438 3,9.5 C3,11.47 3.76,13.26 5,14.6 L5,11 L7,11 Z" id="Path" fill="#19A974"></path>
-              </g>
-            </svg>
-            <p class="f6 mt2 mb1 fw7 lh-title ttu" style="color: #19A974;">Continuous Improvement</p>
-          <h1 class="f6 fw4 lh-copy mv0" style="color: #19A974;">Product teams should apply tight feedback loops not only to the products they work on, but also towards improving their teams.</h1>
-        </div>
-      </div>
+      <p class="libre text-center mt-5">
+        © 2019 Kevin Chang, All Rights Reserved
+      </p>
 
     </div>
 
-</body>
+  </body>
 </html>
