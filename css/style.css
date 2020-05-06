@@ -2,8 +2,8 @@ body {
   font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
-.libre {
-  font-family: 'Libre Baskerville', serif;
+.mono {
+  font-family: "PT Mono", monospace;
 }
 
 .bg-light {
@@ -84,6 +84,17 @@ p {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='8px' height='12px' viewBox='0 0 8 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpolygon fill='%23FFFFFF' points='0 1.4 1.4 0 7.4 6 1.4 12 0 10.6 4.6 6'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
 }
 
+.lock, .lock-light {
+  float: right;
+  width: 16px;
+  height: 21px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='21px' viewBox='0 0 16 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Elock%3C/title%3E%3Cg id='Portfolio' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='lock' fill='%23000000' fill-rule='nonzero'%3E%3Cpath d='M8,16 C9.1045695,16 10,15.1045695 10,14 C10,12.89 9.1,12 8,12 C6.8954305,12 6,12.8954305 6,14 C6,15.1045695 6.8954305,16 8,16 M14,7 C15.1045695,7 16,7.8954305 16,9 L16,19 C16,20.1045695 15.1045695,21 14,21 L2,21 C0.8954305,21 0,20.1045695 0,19 L0,9 C0,7.89 0.9,7 2,7 L3,7 L3,5 C3,2.23857625 5.23857625,0 8,0 C9.32608245,0 10.597852,0.526784202 11.5355339,1.46446609 C12.4732158,2.40214799 13,3.67391755 13,5 L13,7 L14,7 M8,2 C6.34314575,2 5,3.34314575 5,5 L5,7 L11,7 L11,5 C11,3.34314575 9.65685425,2 8,2 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.lock-light {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='21px' viewBox='0 0 16 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Elock-light%3C/title%3E%3Cg id='Portfolio' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='lock-light' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M8,16 C9.1045695,16 10,15.1045695 10,14 C10,12.89 9.1,12 8,12 C6.8954305,12 6,12.8954305 6,14 C6,15.1045695 6.8954305,16 8,16 M14,7 C15.1045695,7 16,7.8954305 16,9 L16,19 C16,20.1045695 15.1045695,21 14,21 L2,21 C0.8954305,21 0,20.1045695 0,19 L0,9 C0,7.89 0.9,7 2,7 L3,7 L3,5 C3,2.23857625 5.23857625,0 8,0 C9.32608245,0 10.597852,0.526784202 11.5355339,1.46446609 C12.4732158,2.40214799 13,3.67391755 13,5 L13,7 L14,7 M8,2 C6.34314575,2 5,3.34314575 5,5 L5,7 L11,7 L11,5 C11,3.34314575 9.65685425,2 8,2 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
 .aspect-ratio {
   height: 0;
   position: relative;
@@ -115,7 +126,7 @@ p {
 }
 
 .hover-shadow-sm:hover {
-  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.125rem 1.825rem rgba(0, 0, 0, 0.18);
 }
 
 .icon-round {
@@ -182,4 +193,21 @@ svg.icon[class*='bg-'] {
   border-style: solid;
   border-width: 0 40px 40px 0;
   border-color: transparent #F3F4F6 transparent transparent;
+}
+
+.diagonal {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  height: 60vw;
+  right: 0;
+}
+
+.card {
+  min-height: 400px;
+}
+
+.card-img-top-sm {
+  width: 70%;
+  margin: 0 auto;
 }
