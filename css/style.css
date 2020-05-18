@@ -203,6 +203,13 @@ svg.icon[class*='bg-'] {
   right: 0;
 }
 
+@media (max-width: 768px) {
+  .diagonal {
+    width: 130%;
+    height: 80vw;
+  }
+}
+
 .card {
   min-height: 400px;
 }
