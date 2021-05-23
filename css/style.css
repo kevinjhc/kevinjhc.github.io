@@ -2,6 +2,10 @@ body {
   font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
+.lh-125 {
+  line-height: 1.25rem;
+}
+
 .mono {
   font-family: "PT Mono", monospace;
 }
@@ -57,8 +61,25 @@ p {
   line-height: 1.7rem;
 }
 
+.top-banner {
+  padding: 150px 0 60px;
+}
+
+@media (max-width: 768px) {
+  .top-banner {
+    padding: 0px 0 100px;
+  }
+}
+
+
 .clients {
-  padding: 150px 0;
+  padding: 150px 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .clients {
+    padding: 1.5rem 0;
+  }
 }
 
 .clients-list img {
