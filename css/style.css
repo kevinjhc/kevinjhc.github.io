@@ -29,6 +29,16 @@ body {
   border-color: #0C8BB6;
 }
 
+nav a {
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  text-decoration: none;
+  opacity: .5;
+}
+
 img {
   max-width: 100%;
 }
