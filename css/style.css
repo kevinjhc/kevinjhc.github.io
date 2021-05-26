@@ -308,3 +308,26 @@ svg.icon[class*='bg-'] {
   .div9 { grid-area: 5 / 1 / 6 / 2; }
   .div10 { grid-area: 5 / 2 / 6 / 3; }
 }
+
+
+.circle{
+  position:relative;
+  width:100%;
+  padding-bottom:100%;
+  border-radius:50%;
+}
+.circle.pm { border: 4px solid #6f42c1; }
+.circle.eng { border: 4px solid #198754; }
+.circle.des { border: 4px solid #fd7e14; }
+.circle p {
+  position:absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  margin:0;
+}
+@media (max-width: 768px) {
+  .circle p {
+    font-size: .8rem;
+    line-height: .8rem;
+  }
+}
