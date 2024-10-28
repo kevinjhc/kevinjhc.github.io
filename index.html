@@ -22,6 +22,9 @@
   </head>
 
   <body>
+    <div id="cursor" class="cursor">
+      View Project
+    </div>
     <div class="pb-4 px-4">
 
       <div class="top-banner container">
@@ -66,7 +69,7 @@
           <img src="img/portfolio/airforce_0.png" class="img-fluid rounded-xl shadow-sm">
         </a>
 
-        <a href="reviewer.html" class="card hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
+        <a href="reviewer.html" class="card dark hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
           <img src="img/portfolio/reviewer_0.png" class="img-fluid rounded-xl shadow-sm">
         </a>
 
@@ -177,5 +180,43 @@
     </div>
 
     <script src="js/vanilla-tilt.min.js"></script>
+    <script>
+      var cursor = document.getElementById('cursor');
+
+      document.addEventListener('mousemove', moveCursor)
+
+      function moveCursor(e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
+      }
+
+      var cards = document.getElementsByClassName('card');
+
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('mousemove', function() {
+          cursor.classList.add('hover-cursor');
+        })
+
+        cards[i].addEventListener('mouseleave', function () {
+          cursor.classList.remove('hover-cursor');
+        })
+      }
+
+      var cards = document.getElementsByClassName('dark');
+
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('mousemove', function() {
+          cursor.classList.add('hover-cursor-dark');
+        })
+
+        cards[i].addEventListener('mouseleave', function () {
+          cursor.classList.remove('hover-cursor-dark');
+        })
+      }
+
+     
+    </script>
   </body>
 </html>
