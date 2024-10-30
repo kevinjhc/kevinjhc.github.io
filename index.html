@@ -27,7 +27,7 @@
     </div>
 
     <div id="cursor-missing" class="cursor">
-      Coming Soon
+      Reach out for details
     </div>
     <div class="pb-4 px-4">
 
@@ -81,11 +81,11 @@
           <img src="img/portfolio/ubersense_0.png" class="img-fluid rounded-xl shadow-sm">
         </a>
 
-        <a href="javascript:void(0);" class="card missing hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
+        <a href="javascript:void(0);" class="d-flex missing hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
           <img src="img/portfolio/casetext_0.png" class="img-fluid rounded-xl shadow-sm">
         </a>
 
-        <a href="javascript:void(0);" class="card missing-dark hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
+        <a href="javascript:void(0);" class="d-flex missing-dark hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
           <img src="img/portfolio/parexel_0.png" class="img-fluid rounded-xl shadow-sm">
         </a>
 
@@ -104,7 +104,7 @@
 
       function moveCursor(e) {
         let x = e.clientX;
-        let y = e.clientY;
+        let y = e.clientY-25;
         cursor.style.left = `${x}px`;
         cursor.style.top = `${y}px`;
       }
@@ -140,7 +140,7 @@
 
       function moveCursor2(e) {
         let x = e.clientX;
-        let y = e.clientY;
+        let y = e.clientY-25;
         cursor2.style.left = `${x}px`;
         cursor2.style.top = `${y}px`;
       }
