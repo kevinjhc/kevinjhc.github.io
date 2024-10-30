@@ -25,6 +25,10 @@
     <div id="cursor" class="cursor">
       View Project
     </div>
+
+    <div id="cursor-missing" class="cursor">
+      Coming Soon
+    </div>
     <div class="pb-4 px-4">
 
       <div class="top-banner container">
@@ -77,100 +81,13 @@
           <img src="img/portfolio/ubersense_0.png" class="img-fluid rounded-xl shadow-sm">
         </a>
 
-        <!--<a href="casetext.html" class="card hover-shadow-sm text-decoration-none text-white border-1 mb-4 overflow-hidden" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="5000" style="background-image: linear-gradient(154deg, #141414 0%, #353535 100%);">
+        <a href="javascript:void(0);" class="missing hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
+          <img src="img/portfolio/casetext_0.png" class="img-fluid rounded-xl shadow-sm">
+        </a>
 
-          <div class="row px-3 px-md-5 pt-3 pt-md-5">
-            <div class="col d-flex align-items-center">
-              <div class="card-body pt-4 pt-md-0">
-                <div class="text-decoration-none text-dark media mb-2">
-                  <img class="bd-placeholder-img" height="38" src="img/clients/casetext.svg">
-                </div>
-
-                <h2 class="mt-5 portfolio-title card-title font-weight-light">Case Law Search</h2>
-                <p class="card-text" style="clear: both; max-width: 620px;">I redesigned the core search product to be more accessible and intuitive, resulting in a 40% increase in searches.</p>
-
-                <p class="h6 mb-3">
-                  <span class="badge border mono mb-1 mb-1">Consumer</span>
-                  <span class="badge border mono mb-1 mb-1">Web & Mobile</span>
-                  <span class="badge border mono mb-1 mb-1">UI/UX</span>
-                </p>
-
-                <div class="portfolio-button mt-4 btn py-2 px-3 text-white border rounded-pill">
-                  View
-                  <div class="arrow-light ml-2"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 d-flex align-items-end mb-5" style="z-index: 10;">
-              <img src="img/portfolio/casetext.png" class="card-img-top">
-            </div>
-
-            <div class="card-body mb-4">
-              <div class="row m-0 mb-md-4">
-                <div class="col-12 col-md-6 mb-4 mb-md-0">
-                  <img src="img/portfolio/casetext.png">
-                </div>
-                <div class="col-12 col-md-6">
-                  <img src="img/portfolio/casetext2.png">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </a>-->
-
-        <!--<a href="parexelgpt.html" class="card hover-shadow-sm text-decoration-none text-body border-1 bg-white mb-4 overflow-hidden" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="5000">
-
-
-          <div class="row px-3 px-md-5 pt-3 pt-md-5">
-            <div class="col d-flex align-items-center">
-              <div class="card-body pt-4 pt-md-0">
-                <div class="text-decoration-none text-dark media mb-2">
-                  <img class="bd-placeholder-img" height="32" src="img/clients/parexel.svg">
-                </div>
-
-                <h2 class="mt-5 portfolio-title card-title font-weight-light">ParexelGPT — AI tool for clinical research</h2>
-                <p class="card-text" style="clear: both; max-width: 620px;">As part of the AI Labs I designed ParexelGPT, a tool that reduces costly errors and research costs for one of the largest clinical research organizations.</p>
-
-                <p class="h6 text-muted mb-3">
-                  <span class="badge border mono mb-1 mb-1">Generative AI</span>
-                  <span class="badge border mono mb-1 mb-1">User Research</span>
-                  <span class="badge border mono mb-1 mb-1">End-to-end Design</span>
-                </p>
-
-                <div class="portfolio-button mt-4 btn py-2 px-3 text-dark border rounded-pill mb-4">
-                  View
-                  <div class="arrow ml-2"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 d-flex align-items-end mb-4 mb-md-5" style="z-index: 10;">
-              <img src="img/portfolio/parexel3.png">
-            </div>
-
-            <div class="card-body mb-4">
-              <div class="row m-0 mb-4">
-                <div class="col">
-                  <img src="img/portfolio/parexel.png">
-                </div>
-                <div class="col">
-                  <img src="img/portfolio/parexel2.png">
-                </div>
-              </div>
-              <div class="row m-0">
-                <div class="col">
-                  <img src="img/portfolio/parexel3.png">
-                </div>
-                <div class="col">
-                  <img src="img/portfolio/parexel4.png">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </a>-->    
+        <a href="javascript:void(0);" class="missing-dark hover-shadow-sm border mb-4" data-tilt data-tilt-max="2" data-tilt-speed="500" data-tilt-perspective="2000">
+          <img src="img/portfolio/parexel_0.png" class="img-fluid rounded-xl shadow-sm">
+        </a>
 
       </div>
 
@@ -213,6 +130,42 @@
 
         cards[i].addEventListener('mouseleave', function () {
           cursor.classList.remove('hover-cursor-dark');
+        })
+      }
+
+
+      var cursor2 = document.getElementById('cursor-missing');
+
+      document.addEventListener('mousemove', moveCursor2)
+
+      function moveCursor2(e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        cursor2.style.left = `${x}px`;
+        cursor2.style.top = `${y}px`;
+      }
+
+      var missingCards = document.getElementsByClassName('missing');
+
+      for (var i = 0; i < missingCards.length; i++) {
+        missingCards[i].addEventListener('mousemove', function() {
+          cursor2.classList.add('hover-cursor');
+        })
+
+        missingCards[i].addEventListener('mouseleave', function () {
+          cursor2.classList.remove('hover-cursor');
+        })
+      }
+
+      var missingCardsDark = document.getElementsByClassName('missing-dark');
+
+      for (var i = 0; i < missingCardsDark.length; i++) {
+        missingCardsDark[i].addEventListener('mousemove', function() {
+          cursor2.classList.add('hover-cursor-dark');
+        })
+
+        missingCardsDark[i].addEventListener('mouseleave', function () {
+          cursor2.classList.remove('hover-cursor-dark');
         })
       }
 
