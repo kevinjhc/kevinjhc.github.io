@@ -350,35 +350,3 @@ svg.icon[class*='bg-'] {
 .bg-black {
   background: #0F0F0F;
 }
-
-.cursor {
-  position: fixed;
-  opacity: 0;
-  /*width: 15px; 
-  height: 15px;
-  border-radius: 50%;
-  background-color: black;*/
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 100;
-}
-
-.hover-cursor {
-  opacity: 1;
-  background-color: rgba(255,255,255,.2);
-  backdrop-filter: blur(16px);
-  padding: 16px;
-  border-radius: 9999px;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.4);
-}
-
-.hover-cursor-dark {
-  opacity: 1;
-  background-color: rgba(0,0,0,.2);
-  backdrop-filter: blur(16px);
-  padding: 16px;
-  border-radius: 9999px;
-  color: #000;
-  border: 1px solid rgba(0,0,0,.3);
-}
