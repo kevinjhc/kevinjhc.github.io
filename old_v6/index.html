@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- TODO: set your full name in <title> and meta tags -->
 <title>Kevin Chang · Product Designer &amp; Design Engineer</title>
-<meta name="description" content="Kevin Chang, product designer and design engineer with 15 years of experience across legal tech, AI, healthcare, government, and financial services." />
+<meta name="description" content="Kevin Chang — product designer and design engineer with 15 years of experience across legal tech, AI, healthcare, government, and financial services." />
 <meta property="og:title" content="Kevin Chang · Product Designer & Design Engineer" />
 <meta property="og:description" content="Product designer and design engineer. 15 years across legal tech, AI, healthcare, government, and financial services." />
 <meta property="og:type" content="website" />
@@ -111,13 +111,11 @@ header.nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);back
 .hero-email{font-family:var(--f-label);font-size:11px;letter-spacing:.09em;color:var(--ink-faint);text-transform:uppercase;transition:color .3s}
 .hero-email:hover{color:var(--ink)}
 .hero-center{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;flex:1;min-height:0;width:100%;gap:0}
-/* narrow + tall screens: group the name, carousel, and role text closer together instead of spreading them */
-@media (max-width:640px) and (max-aspect-ratio:3/4){.hero-center{justify-content:center;gap:clamp(26px,4.5vh,56px)}}
 .hero-name{font-weight:600;font-size:min(clamp(52px,12.5vw,204px),17vh);letter-spacing:-.04em;line-height:.86;position:relative;z-index:2}
 
 /* ===== hero motion tiles, full-bleed 3D carousel (drag or scroll horizontally) ===== */
 .hero-tiles{position:relative;z-index:3}
-.tiles-viewport{--card-w:clamp(250px,31vw,480px);--rx:-17deg;--ry:-33deg;--tile-aspect:7 / 5;--spread:240px;position:relative;width:100vw;margin-left:calc(50% - 50vw);cursor:grab;-webkit-user-select:none;user-select:none;opacity:1;overflow:hidden;animation:tilesIn .6s var(--ease) both}
+.tiles-viewport{--card-w:clamp(250px,31vw,480px);--rx:-17deg;--ry:-33deg;--tile-aspect:7 / 5;position:relative;width:100vw;margin-left:calc(50% - 50vw);cursor:grab;-webkit-user-select:none;user-select:none;opacity:1;overflow:hidden;animation:tilesIn .6s var(--ease) both}
 @keyframes tilesIn{from{opacity:0}to{opacity:1}}
 .tiles-viewport.dragging{cursor:grabbing}
 .tiles-track{display:flex;align-items:center;width:max-content;padding:clamp(74px,10vh,100px) 0 clamp(90px,12vh,118px);will-change:transform;touch-action:pan-y}
@@ -129,7 +127,7 @@ header.nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);back
 .tiles-viewport.dragging .mtile{cursor:grabbing}
 .mtile-slot:hover .mtile,.mtile-slot.is-held .mtile{box-shadow:0 3px 8px rgba(0,0,0,.22),0 34px 64px -42px rgba(0,0,0,.42)}
 .mtile .fill{position:absolute;inset:0}
-.fill.tile{background-size:100%;background-position:center;background-repeat:no-repeat;transition:transform 1s var(--ease)}
+.fill.tile{background-size:cover;background-position:center;background-repeat:no-repeat;transition:transform 1s var(--ease)}
 .mtile-slot:hover .fill.tile{transform:scale(1.045)}
 /* hover backing panel + meta caption */
 .mtile-panel{position:absolute;top:-16px;left:-16px;right:-16px;bottom:-78px;border-radius:30px;background:rgba(255,255,255,.25);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:-1;opacity:0;transition:opacity .55s var(--ease);will-change:opacity}
@@ -176,24 +174,6 @@ header.nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);back
 .statement .st-head{position:relative;font-weight:600;font-size:clamp(21px,3vw,30px);letter-spacing:-.03em;line-height:1.05;color:#F4F1EA;max-width:15ch;text-wrap:balance}
 .statement .st-foot{position:relative;margin-top:9px;font-size:clamp(11.5px,1.1vw,12.5px);line-height:1.46;letter-spacing:-.004em;color:rgba(244,241,234,.52);max-width:30ch}
 @media (hover:none){.tiles-viewport{--card-w:clamp(220px,62vw,320px)}}
-/* medium widths: keep the fan but make the 3D tilt + overlap less pronounced */
-@media (min-width:641px) and (max-width:1200px){
-  .tiles-viewport{--spread:180px}
-  .mtile-slot + .mtile-slot{margin-left:calc(var(--card-w) * -0.54)}
-}
-/* mobile: stack the carousel vertically so every card is fully visible and tappable (no hover needed) */
-@media (max-width:640px){
-  .hero{height:auto;min-height:100svh;overflow:visible;padding-top:32px}
-  .hero-center{justify-content:flex-start;gap:24px}
-  .hero-tiles{order:1;margin-top:12px}   /* carousel below name + subheader on mobile, with a bit more space before it */
-  .tiles-viewport{width:auto;margin-left:0;overflow:visible;cursor:default;--card-w:calc(100vw - 2 * var(--pad));animation:none}
-  .tiles-track{flex-direction:column;align-items:center;width:100%;padding:0;gap:24px;transform:none!important;touch-action:auto}
-  .mtile-slot{transform:none!important;perspective:none;transition:none}
-  .mtile-slot + .mtile-slot{margin-left:0}
-  .mtile-3d{transform:none!important;transition:none}
-  .mtile-panel{display:none}
-  .mtile-meta{position:static;opacity:1;transform:none;padding:14px 2px 0}
-}
 @media (prefers-reduced-motion:reduce){.aur-blob{animation:none}}
 /* carousel mounted inside the hero (between the name and the role), sized to fit the viewport */
 .hero-carousel{width:100%;margin-block:clamp(8px,2vh,28px)}
@@ -372,7 +352,7 @@ body.light .hero-role{color:rgba(10,10,12,.28)}
 .mw-title{font-weight:500;font-size:17px;letter-spacing:-.02em}
 .mw-disc{font-family:var(--f-label);font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-faint);text-align:right;white-space:nowrap}
 
-/* ===================== ABOUT (light editorial, page has faded to light here) ===================== */
+/* ===================== ABOUT (light editorial — page has faded to light here) ===================== */
 #about{padding-block:clamp(96px,16vh,200px)}
 .about-grid{display:grid;grid-template-columns:1fr;gap:clamp(44px,6vw,96px)}
 @media(min-width:900px){.about-grid{grid-template-columns:1.15fr .85fr;gap:clamp(56px,8vw,140px);align-items:start}}
@@ -389,11 +369,11 @@ body:not(.light) .about-lede .dim{color:rgba(243,243,241,.42)}
 @media(max-width:460px){.about-sub{grid-template-columns:1fr;gap:26px}}
 .clients{margin-top:clamp(64px,8vw,120px)}
 .clients-label{font-family:var(--f-label);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:clamp(28px,3.2vw,46px);text-align:center}
-.clients-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.client-logo{aspect-ratio:5/2;display:grid;place-items:center;padding:10px;box-shadow:1px 0 0 var(--line),0 1px 0 var(--line);min-height:0;overflow:hidden}
+.clients-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.client-logo{aspect-ratio:5/2;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--bg-2);display:grid;place-items:center;padding:14px}
 .client-logo img{max-width:80%;max-height:46px;width:auto;object-fit:contain}
-@media(max-width:880px){.clients-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:480px){.clients-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){.clients-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.clients-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* experience */
 .exp{margin-top:clamp(56px,8vw,104px);border-top:1px solid var(--line)}
@@ -424,13 +404,13 @@ footer{margin-top:0}
 #case.active{display:block}
 body.case-open #home{display:none}
 body.case-open header.nav{display:none}
-.case-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:101;width:max-content;max-width:calc(100vw - 24px);display:flex;align-items:center;gap:4px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border:1px solid var(--line);border-radius:100px;padding:5px;box-shadow:0 6px 20px rgba(10,10,11,.10),0 1px 3px rgba(10,10,11,.06)}
+.case-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:101;display:flex;align-items:center;gap:4px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border:1px solid var(--line);border-radius:100px;padding:5px;box-shadow:0 6px 20px rgba(10,10,11,.10),0 1px 3px rgba(10,10,11,.06)}
 .case-nav-btn{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;color:var(--ink);border-radius:100px;padding:8px 15px;white-space:nowrap;transition:background .25s,color .25s}
 .case-nav-btn:hover{background:color-mix(in srgb,var(--ink) 7%,transparent)}
 .case-nav-btn.mid{color:var(--ink-soft)}
 .case-nav-btn.mid:hover{color:var(--ink)}
 .case-nav-btn.icon{padding:8px 11px}
-.case-nav-btn .ico{width:17px;height:17px;flex:none;display:block;transform:translateX(-0.75px)}
+.case-nav-btn .ico{width:17px;height:17px;display:block;transform:translateX(-0.75px)}
 .case-nav-btn .arr{color:var(--ink-faint);transition:transform .35s var(--ease)}
 #casePrev:hover .arr{transform:translateX(-3px)}
 #caseNext:hover .arr{transform:translateX(3px)}
@@ -447,23 +427,15 @@ body.case-open header.nav{display:none}
 .case-thumb.active .ct-name{color:var(--ink);font-weight:600}
 @media (max-width:600px){.case-thumbs{grid-template-columns:repeat(4,60px);gap:8px;padding:10px}}
 /* case study sits in a centered column; cover + blocks share the same width */
-.case-hero{max-width:calc(1080px + var(--pad) * 2);padding-top:clamp(84px,11vh,132px);padding-bottom:clamp(8px,1.5vw,20px)}
-.case-logo{display:block;height:42px;width:auto;margin:0 0 18px}
-.case-logo.logo-airforce{height:40px;margin-bottom:18px}
-.case-hero h1{display:none}
-.case-hero .sub{margin-top:0;font-size:clamp(30px,4vw,46px);color:var(--ink);max-width:20ch;letter-spacing:-.03em;line-height:1.08}
-body[data-case="airforce"] .case-hero .sub{max-width:26ch}
+.case-hero{max-width:calc(1080px + var(--pad) * 2);padding-top:clamp(108px,15vh,168px);padding-bottom:clamp(8px,1.5vw,20px)}
+.case-hero h1{font-weight:600;font-size:clamp(40px,7vw,84px);letter-spacing:-.04em;line-height:1;max-width:14ch}
+.case-hero .sub{margin-top:clamp(16px,2vw,24px);font-size:clamp(18px,2.1vw,27px);color:var(--ink-soft);max-width:44ch;letter-spacing:-.015em;line-height:1.3}
 .case-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,2.6vw,32px) clamp(36px,4.5vw,64px);margin-top:clamp(30px,4vw,52px)}
 .case-meta .k{font-family:var(--f-label);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);margin-bottom:8px}
 .case-meta .v{font-size:clamp(16px,1.2vw,18px);color:var(--ink)}
-.case-meta.ov{grid-template-columns:repeat(3,minmax(0,1fr))}
-.case-meta.ov .v + .v{margin-top:7px}
-.case-block.ov-block{display:block}
-.case-block.ov-block .ov-text{max-width:none}
-@media(max-width:640px){.case-meta.ov{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .case-cover{max-width:1080px;margin:clamp(40px,6vw,84px) auto;aspect-ratio:16/9;border-radius:var(--r-lg);overflow:hidden;position:relative;border:1px solid var(--line-soft)}
 .case-cover .wm{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-label);color:rgba(255,255,255,.16);text-transform:uppercase;font-size:clamp(20px,3vw,38px)}
-/* body: centered two-column blocks, label left, content right */
+/* body: centered two-column blocks — label left, content right */
 #cBody{max-width:1080px;margin-inline:auto}
 .case-block{display:grid;grid-template-columns:1fr;gap:16px;padding-block:clamp(34px,5vw,56px);border-top:1px solid var(--line)}
 .case-block:first-child{border-top:none}
@@ -472,7 +444,6 @@ body[data-case="airforce"] .case-hero .sub{max-width:26ch}
 .case-block .body p{color:#33333A;margin-bottom:1em;font-size:clamp(18px,1.5vw,22px);line-height:1.6}
 .case-block .body p:last-child{margin-bottom:0}
 .case-block .body p.lead{color:var(--ink);font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;line-height:1.34}
-.case-block .body p.ov-text{font-size:clamp(15px,1.1vw,17px);color:var(--ink-soft);line-height:1.6;max-width:70ch}
 .case-block .body .case-figure{margin-top:clamp(20px,2.5vw,34px)}
 .case-figure{aspect-ratio:16/9;border-radius:var(--r-md);overflow:hidden;position:relative;border:1px solid var(--line-soft)}
 .case-figure .wm{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-label);color:rgba(255,255,255,.2);text-transform:uppercase;font-size:14px;letter-spacing:.04em}
@@ -480,80 +451,16 @@ body[data-case="airforce"] .case-hero .sub{max-width:26ch}
 .case-cover.shot-mobile,.case-figure.shot-mobile{background-size:contain;background-position:center;background-repeat:no-repeat;padding:clamp(14px,3vw,30px)}
 .case-cover[class*=shot] .wm,.case-cover[class*=shot] .grid-overlay,.case-figure[class*=shot] .wm,.case-figure[class*=shot] .grid-overlay{display:none}
 /* embedded Figma case-study deck (full width of the content column) */
-.case-deck-block{padding-block:clamp(34px,5vw,56px)}
+.case-deck-block{padding-block:clamp(34px,5vw,56px);border-top:1px solid var(--line)}
 .case-deck-block:first-child{border-top:none;padding-top:clamp(8px,2vw,24px)}
 .case-deck-label{font-family:var(--f-label);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:clamp(16px,2vw,22px)}
 .case-deck{position:relative;width:100%;aspect-ratio:16/10;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--bg-2)}
 .case-deck iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-/* static screenshot gallery (from the older portfolio), shown under the deck */
-.case-figs{padding-top:clamp(32px,4.5vw,52px);border-top:1px solid var(--line)}
-.case-fig{margin:0 0 clamp(48px,7vw,84px)}
-.case-fig:last-child{margin-bottom:0}
-.case-fig figcaption{margin:0 0 clamp(14px,1.6vw,20px);text-align:left}
-.case-fig .fig-h{display:block;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:var(--ink);line-height:1.4}
-.case-fig .fig-s{display:block;margin-top:5px;font-size:clamp(14px,1.1vw,16px);color:var(--ink-soft);line-height:1.5}
-.case-fig .fig-media{display:flex;justify-content:center}
-.case-fig .fig-media img{max-width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line-soft)}
-/* only mobile-app (phone) galleries get the gray container */
-.case-figs-phone .case-fig .fig-media{background:var(--bg-2);border:1px solid var(--line-soft);border-radius:18px;padding:clamp(20px,3.2vw,44px)}
-.case-figs-phone .case-fig .fig-media img{max-width:min(100%,400px);border:0}
-/* reviewer + casetext screenshots don't need rounded corners */
-.case-figs-reviewer .case-fig .fig-media img,.case-figs-casetext .case-fig .fig-media img{border-radius:0}
-/* Case-study gallery: left-aligned draggable strip that overflows right + fullscreen modal */
-.case-gallery{width:100vw;position:relative;left:50%;margin-left:-50vw;margin-top:clamp(40px,6vw,72px)}
-.cg-strip{display:flex;gap:clamp(14px,1.4vw,24px);align-items:flex-start;overflow-x:auto;overflow-y:hidden;padding:8px max(var(--pad),calc((100vw - 1080px)/2)) 8px;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-.cg-strip::-webkit-scrollbar{display:none}
-.cg-strip:active{cursor:grabbing}
-.cg-card{flex:0 0 auto;cursor:pointer;-webkit-user-select:none;user-select:none;transition:transform .3s ease}
-.cg-card:hover{transform:translateY(-4px)}
-.cg-media{height:clamp(280px,40vh,440px);border-radius:14px;overflow:hidden;background:var(--bg-2);border:1px solid var(--line)}
-.cg-card-cap{margin-bottom:14px;width:0;min-width:100%;min-height:63px}
-.cg-card-cap .cg-h{display:block;font-size:15px;font-weight:600;color:var(--ink);line-height:1.35}
-.cg-card-cap .cg-s{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:3px;font-size:13.5px;color:var(--ink-soft);line-height:1.45}
-html.cg-lock{overflow:hidden}
-/* reviewer/casetext screenshots have a 1px border baked in: crop it off every side (incl. the right) by scaling the image up a hair so overflow-hidden clips the border */
-.cg-reviewer .cg-media img,.cg-casetext .cg-media img{transform:scale(1.008)}
-.cg-reviewer .cg-slide-media img,.cg-casetext .cg-slide-media img{transform:scale(1.005)}
-/* the last casetext screenshot has no baked border, so leave it alone */
-.cg-casetext .cg-strip .cg-card:last-child .cg-media img,.cg-casetext .cg-modal-scroll .cg-slide:last-child .cg-slide-media img{transform:none}
-.cg-media img{height:100%;width:auto;display:block;-webkit-user-drag:none}
-.cg-phone .cg-card .cg-media{aspect-ratio:14 / 10;display:flex;align-items:center;justify-content:center}
-.cg-phone .cg-card .cg-media img{height:84%;width:auto;border-radius:8px}
-.cg-explore{display:none;margin:clamp(20px,3vw,28px) max(var(--pad),calc((100vw - 1080px)/2)) 0;align-items:center;gap:8px;background:var(--ink);color:var(--bg);border:0;border-radius:100px;padding:13px 22px;font-size:15px;font-weight:500;cursor:pointer}
-.cg-modal{position:fixed;inset:0;z-index:1000;background:var(--bg-2)}
-.cg-modal[hidden]{display:none}
-.cg-modal-scroll{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;padding:clamp(64px,9vh,110px) var(--pad) clamp(56px,10vh,120px)}
-.cg-modal-scroll::-webkit-scrollbar{display:none}
-.cg-modal-close{position:fixed;top:16px;right:16px;z-index:2;border-radius:100px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);box-shadow:0 6px 20px rgba(10,10,11,.10),0 1px 3px rgba(10,10,11,.06);font-size:13.5px;font-weight:500;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:9px 16px}
-.cg-modal-close .cg-close-x{font-size:12px;line-height:1;color:var(--ink-soft)}
-.cg-slide{max-width:1000px;margin:0 auto clamp(52px,7vw,96px)}
-.cg-slide:last-child{margin-bottom:0}
-.cg-slide-media{border-radius:12px;overflow:hidden;background:var(--bg-2);border:1px solid var(--line)}
-.cg-slide-media img{width:100%;height:auto;display:block}
-.cg-phone .cg-slide-media{max-width:none;margin:0 auto;aspect-ratio:16 / 9;display:flex;align-items:center;justify-content:center;background:#fff}
-.cg-phone .cg-slide-media img{width:auto;height:86%}
-.cg-slide figcaption{margin:0 auto clamp(14px,1.6vw,20px);text-align:left;max-width:1000px}
-.cg-slide .cg-h{display:block;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:var(--ink);line-height:1.4}
-.cg-slide .cg-s{display:block;margin-top:5px;font-size:clamp(14px,1.1vw,16px);color:var(--ink-soft);line-height:1.5}
-@media(max-width:640px){
-  .case-gallery{position:static;left:auto;width:auto;margin:clamp(40px,6vw,72px) 0 0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 34px rgba(10,10,12,.06)}
-  .cg-strip{overflow:visible;padding:14px 14px 0;display:block}
-  .cg-strip .cg-card:not(:first-child){display:none}
-  .cg-card{height:auto;width:100%}
-  .cg-card:hover{transform:none}
-  .cg-card-cap{display:none}
-  .cg-media{height:auto;border-radius:14px}
-  .cg-media img{width:100%;height:auto}
-  .cg-phone .cg-card .cg-media{aspect-ratio:14 / 10;height:auto}
-  .cg-phone .cg-card .cg-media img{width:auto;height:84%}
-  .cg-explore{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;margin:14px 0 0;padding:16px 18px;background:none;color:var(--ink);border:0;border-top:1px solid var(--line-soft);border-radius:0;font-size:16px;font-weight:400}
-  .cg-explore .cg-explore-ico{width:17px;height:17px;color:var(--ink-soft);flex:none}
-}
 /* design-challenge pull-quote (full width of the content column) */
 .case-quote{padding-block:clamp(30px,4.5vw,52px);border-top:1px solid var(--line)}
 .case-quote .ql{font-family:var(--f-label);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:clamp(14px,1.8vw,20px)}
 .case-quote .q{font-weight:500;font-size:clamp(24px,3.2vw,40px);letter-spacing:-.02em;line-height:1.24;color:var(--ink);max-width:24ch}
-/* Impact: cards inside the two-column block, big number on top, title + description below */
+/* Impact: cards inside the two-column block — big number on top, title + description below */
 .case-impact{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:14px}
 .case-impact .ci{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(56px,7vw,96px);min-height:clamp(240px,21vw,310px);background:var(--bg-2);border-radius:var(--r-lg);padding:clamp(22px,2vw,30px)}
 .case-impact .ci-n{font-weight:600;font-size:clamp(38px,4vw,58px);letter-spacing:-.04em;line-height:.95;color:var(--ink)}
@@ -624,7 +531,7 @@ html.cg-lock{overflow:hidden}
       <h5 class="clients-label">Select experience</h5>
       <div class="clients-grid">
         <div class="client-logo"><img src="img/clients/amex.svg" alt="American Express" style="height:42px"></div>
-        <div class="client-logo"><img src="img/clients/expressscripts.svg" alt="Express Scripts" style="height:36px"></div>
+        <div class="client-logo"><img src="img/clients/expressscripts.svg" alt="Express Scripts" style="height:28px"></div>
         <div class="client-logo"><img src="img/clients/accredo.svg" alt="Accredo" style="height:28px"></div>
         <div class="client-logo"><img src="img/clients/trellis.svg" alt="Trellis" style="height:22px"></div>
         <div class="client-logo"><img src="img/clients/pivotal.svg" alt="Pivotal" style="height:22px"></div>
@@ -653,7 +560,6 @@ html.cg-lock{overflow:hidden}
     <div class="case-thumbs" id="caseThumbs"></div>
   </nav>
   <div class="case-hero wrap">
-    <img id="cLogo" class="case-logo" alt="" hidden>
     <h1 id="cTitle"></h1>
     <p class="sub" id="cSub"></p>
   </div>
@@ -675,18 +581,18 @@ html.cg-lock{overflow:hidden}
 /* ===== DATA, edit freely. bg picks a generative panel (a–f). ===== */
 const FEATURED=[
   {slug:"airforce",idx:"01",pill:"Product",bg:"a",img:"img/work/airforce.png",title:"U.S. Air Force",year:"2015–2017",
-   desc:"Embedded with Pivotal Labs and the U.S. Air Force, I helped reimagine how aircrew create mission reports (MISREPs) and how the force uses that data. A 0→1 product that made report creation 8× faster, reached 100% adoption, and earned additional funding from Congress.",
+   desc:"Embedded with Pivotal Labs and the U.S. Air Force, I helped reimagine how aircrew create mission reports (MISREPs) and how the force uses that data — a 0→1 product that made report creation 8× faster, reached 100% adoption, and earned additional funding from Congress.",
    tags:["Product","Mission-critical","Geospatial"],
    sub:"Improving how the U.S. Air Force reports and uses mission data.",
-   impact:[["8×","Faster report creation","Aircrew created mission reports 8× faster than the prior workflow."],["100%","User adoption","Full adoption, and the work earned added Congressional funding and praise from the Secretary of Defense."]],
+   impact:[["8×","Faster report creation","Aircrew created mission reports 8× faster than the prior workflow."],["100%","User adoption","Full adoption — and the work earned added Congressional funding and praise from the Secretary of Defense."]],
    role:"Product designer",time:"2015–2017",team:"Pivotal Labs · balanced XP team",disc:"Product · UX · Geospatial"},
   {slug:"reviewer",idx:"02",pill:"UX",bg:"b",img:"img/work/reviewer.png",title:"Reviewer",year:"2017–2019",
-   desc:"A pharmacovigilance case-review tool at Parexel. ML annotations surface ICSR fields, while PDF annotation and auto-detected prefills move analysts through dense medical literature faster and with fewer errors.",
+   desc:"A pharmacovigilance case-review tool at Parexel — ML annotations surface ICSR fields, while PDF annotation and auto-detected prefills move analysts through dense medical literature faster and with fewer errors.",
    tags:["UX","Healthcare","ML-assisted"],
    sub:"ML-assisted case review for drug-safety analysts.",
    role:"UX designer",time:"2017–2019",team:"Product & ML team",disc:"UX · Healthcare · Workflows"},
   {slug:"casetext",idx:"03",pill:"Product",bg:"d",img:"img/work/casetext.png",title:"Casetext",year:"2019–2021",
-   desc:"A consumer-facing legal-research product offering an affordable alternative to Westlaw and LexisNexis. I redesigned the core case-law search, powered by an early AI/NLP matching engine, into a clearer experience that drove a 40% increase in searches.",
+   desc:"A consumer-facing legal-research product offering an affordable alternative to Westlaw and LexisNexis. I redesigned the core case-law search — powered by an early AI/NLP matching engine — into a clearer experience that drove a 40% increase in searches.",
    tags:["Product","Legal AI","Search"],
    sub:"A case-law search redesign that lifted searches 40%.",
    impact:[["40%","More searches","The redesigned search drove a 40% increase in searches."],["Web + mobile","One experience","A consistent, intuitive search experience across web and mobile."]],
@@ -697,10 +603,10 @@ const FEATURED=[
    sub:"Frame-by-frame coaching for athletes, on mobile.",
    role:"Product designer",time:"2013–2014",team:"Cross-functional product",disc:"Mobile · Product · Interaction"},
   /* hidden {slug:"parexelgpt",idx:"05",pill:"Healthcare AI",bg:"f",title:"ParexelGPT",year:"2023–2024",
-   desc:"An internal AI assistant for Parexel (a global CRO running clinical trials for sponsors like Pfizer and Lilly) used by ~20,000 staff. As design lead in the AI lab, I shaped how regulatory specialists, medical writers, and pharmacovigilance teams get trustworthy answers, including search across thousands of internal SOPs.",
+   desc:"An internal AI assistant for Parexel — a global CRO running clinical trials for sponsors like Pfizer and Lilly — used by ~20,000 staff. As design lead in the AI lab, I shaped how regulatory specialists, medical writers, and pharmacovigilance teams get trustworthy answers, including search across thousands of internal SOPs.",
    tags:["Healthcare AI","Internal tool","Product"],
    sub:"An internal healthcare-AI assistant for clinical research.",
-   role:"Design lead",time:"2023–2024",team:"Parexel AI Lab · product, eng, ML",disc:"Healthcare AI · Design lead · UX"}, */
+   role:"Design lead",time:"2023–2024",team:"Parexel AI Lab — product, eng, ML",disc:"Healthcare AI · Design lead · UX"}, */
   /* hidden {slug:"centegix",idx:"06",pill:"Product",bg:"c",title:"CENTEGIX",year:"2023–2024",
    desc:"Interaction patterns for a safety-alerting platform where seconds matter, clarity under pressure, legible at a glance, dependable on every device.",
    tags:["Interaction","Safety-critical","React"],
@@ -720,13 +626,13 @@ const FEATURED=[
 /* Research-grounded case-study copy (problem / approach-insight / solution / outcomes).
    Outcome metrics are illustrative unless otherwise sourced. See CASE-STUDIES.md. */
 const CASE_COPY={
-  airforce:{problem:"Thousands of missions are flown worldwide every day, and aircrew note critical observations in flight: a new building at a coordinate, a drone at a given altitude and time, a MANPAD threat. But turning those observations into mission reports (MISREPs) was slow and manual, and once written the reports were hard to search or reuse across the force.",insight:"The real job wasn't a prettier form; it was simplifying how reports get created and then making that data legible geospatially, so observations could be recorded fast and read where and when they happened.",solution:"A MISREP app that guides aircrew through structured creation (mission information, events, and attachments) with QC review, then publishes to a searchable list and a live map that plots every event by coordinate and time, so analysts can see the whole operating picture, filter, and export. Shipped bi-weekly over 1.5 years, grounded in 100+ user interviews."},
-  reviewer:{problem:"Drug-safety analysts faced thousands of dense ICSR documents, yet couldn't blindly trust ML; automation bias is a real risk when outputs feed reimbursement and compliance.",insight:"Trust comes from showing why, not just what; a suggestion is only useful if its supporting evidence is one glance away.",solution:"A human-in-the-loop flow: ML proposes each field with a confidence signal and links it to highlighted source text; the analyst confirms or corrects in one action, and every decision is logged.",impact:[["Fewer errors","Evidence in context","Source-linked suggestions cut transcription errors and rework."],["Higher throughput","Cases cleared per day","ML triage let analysts focus on the genuinely complex cases."]]},
-  casetext:{problem:"Attorneys lost hours translating real legal situations into rigid Boolean syntax, and still missed on-point cases, while distrusting AI results they couldn't trace.",insight:"The lawyer's own brief already encodes the facts, issues, and jurisdiction a search needs; the document is the query.",solution:"Upload-a-brief search (CARA): drop in a brief and get context-aware results, including relevant uncited authority, each tagged by why it matters, with traceable citations."},
-  ubersense:{problem:"Comparing your technique to a model required two clips that almost never lined up frame-to-frame, making “what’s different?” hard to see on a small touchscreen.",insight:"The value isn't two videos playing; it's the same instant of motion in both, on demand.",solution:"A synced side-by-side mode with per-clip scrubbers that lock both videos to the same frame and step together, with slow-motion and drawing tools layered on top.",impact:[["2.5M+","Downloads","Grew toward millions of downloads before the Hudl acquisition."],["Frame-locked","Compare mode","The signature side-by-side that made coaching teachable."]]},
-  parexelgpt:{problem:"~20,000 Parexel staff (regulatory specialists, medical writers, pharmacovigilance teams) each needed answers buried across thousands of versioned SOPs, and rightly distrusted generic AI for regulated, auditable work.",insight:"In a GxP environment trust isn't a feeling; it's a citation, and one assistant has to serve very different personas without losing that rigor.",solution:"As design lead in the AI lab, I shaped persona-aware grounded answers (every claim cited to a specific, effective SOP section) plus SOP search across thousands of controlled documents, turning a chatbot into an auditable assistant 20k people trust.",impact:[["~60%","Faster SOP lookups","Grounded answers beat manual library search."],["Cited","Every claim","Source-linked answers staff can verify and trust."]]},  centegix:{problem:"In an active threat, seconds matter, but staff often can't reach a phone, and responders waste critical time finding where on a multi-floor campus the alert came from.",insight:"The highest-leverage moment is collapsing alert-to-awareness to near zero while making the incident's location and severity instantly legible.",solution:"A tiered single-button alert feeds a responder view that pins the exact floor and room on a live campus map with nearby assets and real-time status, legible even for a panicked, untrained user.",impact:[["Seconds","To campus-wide alert","Collapsed alert-to-awareness from minutes to seconds."],["Room-level","Locate the incident","Live mapping cut responder time-to-locate."]]},
-  truepill:{problem:"Family pharmacy apps either over-share minors' PHI or bury access rules in legalese, yet HIPAA and state minor-privacy rules govern who can see a dependent's prescriptions, and access must change as a minor ages.",insight:"The legal complexity maps cleanly onto a small set of human-readable account states.",solution:"An access-tier model that turns age and consent rules into approachable, badge-labeled account states (“Managed,” “Shared with teen,” “Self-managed,” “Caregiver”) each with a plain-language explanation and a visible age-out date.",impact:[["Tiered access","Clear by design","Legal rules rendered as human-readable account states."],["Fewer tickets","“Why can’t I see…”","Plain-language access cut confusion for guardians."]]},
-  benchsentry:{problem:"Deliveries fail at the last three feet: couriers can't get into the box quickly or reliably, and an ambiguous lock state erodes owner trust.",insight:"The friction lives in code entry and lock-state ambiguity, not the hardware.",solution:"I rebuilt the app around a “delivery readiness” model: auto-synced carrier codes, a glanceable lock-state and capacity indicator, and one-time courier access, so any driver gets in on the first try.",impact:[["~40%","Fewer missed deliveries","Clearer courier access on the first attempt."],["Real-time","Lock-state alerts","Trustworthy confirmation the box is secured."]]}
+  airforce:{problem:"Thousands of missions are flown worldwide every day, and aircrew note critical observations in flight — a new building at a coordinate, a drone at a given altitude and time, a MANPAD threat. But turning those observations into mission reports (MISREPs) was slow and manual, and once written the reports were hard to search or reuse across the force.",insight:"The real job wasn't a prettier form — it was simplifying how reports get created and then making that data legible geospatially, so observations could be recorded fast and read where and when they happened.",solution:"A MISREP app that guides aircrew through structured creation — mission information, events, and attachments — with QC review, then publishes to a searchable list and a live map that plots every event by coordinate and time, so analysts can see the whole operating picture, filter, and export. Shipped bi-weekly over 1.5 years, grounded in 100+ user interviews."},
+  reviewer:{problem:"Drug-safety analysts faced thousands of dense ICSR documents, yet couldn't blindly trust ML — automation bias is a real risk when outputs feed reimbursement and compliance.",insight:"Trust comes from showing why, not just what — a suggestion is only useful if its supporting evidence is one glance away.",solution:"A human-in-the-loop flow: ML proposes each field with a confidence signal and links it to highlighted source text; the analyst confirms or corrects in one action, and every decision is logged.",impact:[["Fewer errors","Evidence in context","Source-linked suggestions cut transcription errors and rework."],["Higher throughput","Cases cleared per day","ML triage let analysts focus on the genuinely complex cases."]]},
+  casetext:{problem:"Attorneys lost hours translating real legal situations into rigid Boolean syntax — and still missed on-point cases, while distrusting AI results they couldn't trace.",insight:"The lawyer's own brief already encodes the facts, issues, and jurisdiction a search needs — the document is the query.",solution:"Upload-a-brief search (CARA): drop in a brief and get context-aware results — including relevant uncited authority — each tagged by why it matters, with traceable citations."},
+  ubersense:{problem:"Comparing your technique to a model required two clips that almost never lined up frame-to-frame — making “what’s different?” hard to see on a small touchscreen.",insight:"The value isn't two videos playing — it's the same instant of motion in both, on demand.",solution:"A synced side-by-side mode with per-clip scrubbers that lock both videos to the same frame and step together, with slow-motion and drawing tools layered on top.",impact:[["2.5M+","Downloads","Grew toward millions of downloads before the Hudl acquisition."],["Frame-locked","Compare mode","The signature side-by-side that made coaching teachable."]]},
+  parexelgpt:{problem:"~20,000 Parexel staff — regulatory specialists, medical writers, pharmacovigilance teams — each needed answers buried across thousands of versioned SOPs, and rightly distrusted generic AI for regulated, auditable work.",insight:"In a GxP environment trust isn't a feeling — it's a citation; and one assistant has to serve very different personas without losing that rigor.",solution:"As design lead in the AI lab, I shaped persona-aware grounded answers — every claim cited to a specific, effective SOP section — plus SOP search across thousands of controlled documents, turning a chatbot into an auditable assistant 20k people trust.",impact:[["~60%","Faster SOP lookups","Grounded answers beat manual library search."],["Cited","Every claim","Source-linked answers staff can verify and trust."]]},  centegix:{problem:"In an active threat, seconds matter — but staff often can't reach a phone, and responders waste critical time finding where on a multi-floor campus the alert came from.",insight:"The highest-leverage moment is collapsing alert-to-awareness to near zero while making the incident's location and severity instantly legible.",solution:"A tiered single-button alert feeds a responder view that pins the exact floor and room on a live campus map with nearby assets and real-time status — legible even for a panicked, untrained user.",impact:[["Seconds","To campus-wide alert","Collapsed alert-to-awareness from minutes to seconds."],["Room-level","Locate the incident","Live mapping cut responder time-to-locate."]]},
+  truepill:{problem:"Family pharmacy apps either over-share minors' PHI or bury access rules in legalese — yet HIPAA and state minor-privacy rules govern who can see a dependent's prescriptions, and access must change as a minor ages.",insight:"The legal complexity maps cleanly onto a small set of human-readable account states.",solution:"An access-tier model that turns age and consent rules into approachable, badge-labeled account states — “Managed,” “Shared with teen,” “Self-managed,” “Caregiver” — each with a plain-language explanation and a visible age-out date.",impact:[["Tiered access","Clear by design","Legal rules rendered as human-readable account states."],["Fewer tickets","“Why can’t I see…”","Plain-language access cut confusion for guardians."]]},
+  benchsentry:{problem:"Deliveries fail at the last three feet — couriers can't get into the box quickly or reliably, and an ambiguous lock state erodes owner trust.",insight:"The friction lives in code entry and lock-state ambiguity, not the hardware.",solution:"I rebuilt the app around a “delivery readiness” model: auto-synced carrier codes, a glanceable lock-state and capacity indicator, and one-time courier access — so any driver gets in on the first try.",impact:[["~40%","Fewer missed deliveries","Clearer courier access on the first attempt."],["Real-time","Lock-state alerts","Trustworthy confirmation the box is secured."]]}
 };
 FEATURED.forEach(function(p){var cc=CASE_COPY[p.slug]; if(cc){p.problem=cc.problem;p.insight=cc.insight;p.solution=cc.solution;if(cc.impact&&!p.impact)p.impact=cc.impact;}});
 
@@ -739,7 +645,7 @@ const EXPERIENCE=[
   {co:"Pivotal Labs / U.S. Air Force",role:"Designer, Mission Tools",yr:"2015–2017"},
 ];
 
-/* Per-project screen galleries: img/work/solutions/<name>.png. First = cover; rest shown in Solution. */
+/* Per-project screen galleries — img/work/solutions/<name>.png. First = cover; rest shown in Solution. */
 const SHOTS={airforce:['airforce','airforce-2','airforce-3'],reviewer:['reviewer','reviewer-2'],casetext:['casetext','casetext-2'],ubersense:['ubersense','ubersense-2'],parexelgpt:['parexelgpt','parexelgpt-2','parexelgpt-3'],centegix:['centegix','centegix-2'],truepill:['truepill','truepill-2','truepill-3'],benchsentry:['benchsentry','benchsentry-2']};
 const SHOT_MOBILE=['centegix','ubersense','truepill','benchsentry'];
 /* Embedded Figma case-study decks (same as the live site). */
@@ -752,80 +658,37 @@ const DECKS={
 /* Long-form case-study copy extracted from the Figma decks. Outcomes come from FEATURED[].impact. */
 const CASE_LONG={
   airforce:{
-    context:"The Air Force flies thousands of missions worldwide every day, and aircrew note critical in-flight observations: a new building at a coordinate, a drone at a given altitude, a threat. Turning those into mission reports (MISREPs) was slow and manual, and once written the reports were hard to search or reuse across roughly 60 bases, each with its own leadership and reporting standards.",
+    context:"The Air Force flies thousands of missions worldwide every day, and aircrew note critical in-flight observations — a new building at a coordinate, a drone at a given altitude, a threat. Turning those into mission reports (MISREPs) was slow and manual, and once written the reports were hard to search or reuse across roughly 60 bases, each with its own leadership and reporting standards.",
     challenge:"How might we simplify how aircrew create reports, and make that data legible geospatially?",
     research:"Embedded with Pivotal Labs, I advocated for a Lean UX process to build trust with users and stakeholders in a hard-to-access environment. I led discovery grounded in 100+ interviews, contextual inquiry, and card sorting across bases, narrowing our users to the pilot, the drafter, and the analyst and prioritizing which problems to tackle first.",
-    approach:"We prioritized concepts by user value against complexity and explored four in parallel: parsing existing Word reports, pre-filling routine fields, visualizing mission events on a map, and standardizing the reporting structure. Success was measured on two axes: increasing efficiency and reducing the manual errors that got reports kicked back in QC.",
-    solution:"A MISREP app guides aircrew through structured creation (mission info, events, attachments) with a lightweight QC review, then publishes to a searchable list and a live map that plots every event by coordinate and time so analysts can see the whole operating picture, filter, and export. Later releases added ATO pre-fill, automated storyboards, richer search filters, and 3D altitude-and-speed visualization. Shipped bi-weekly over 1.5 years.",
+    approach:"We prioritized concepts by user value against complexity and explored four in parallel: parsing existing Word reports, pre-filling routine fields, visualizing mission events on a map, and standardizing the reporting structure. Success was measured on two axes — increasing efficiency and reducing the manual errors that got reports kicked back in QC.",
+    solution:"A MISREP app guides aircrew through structured creation — mission info, events, attachments — with a lightweight QC review, then publishes to a searchable list and a live map that plots every event by coordinate and time so analysts can see the whole operating picture, filter, and export. Later releases added ATO pre-fill, automated storyboards, richer search filters, and 3D altitude-and-speed visualization. Shipped bi-weekly over 1.5 years.",
     reflection:"Trust was the real deliverable: shipping steadily alongside users earned adoption and, ultimately, additional Congressional funding. There is still opportunity in digitizing the pilot's in-flight notes and going deeper on analyst workflows."
   },
   reviewer:{
-    context:"When a drug such as the COVID vaccine is released, companies must monitor adverse effects and report them to regulators like the FDA, a process called pharmacovigilance. CROs like Parexel are contracted to review thousands of medical-literature articles and file safety reports: an intake-to-report pipeline that was dense, manual, and error-prone.",
+    context:"When a drug such as the COVID vaccine is released, companies must monitor adverse effects and report them to regulators like the FDA — a process called pharmacovigilance. CROs like Parexel are contracted to review thousands of medical-literature articles and file safety reports: an intake-to-report pipeline that was dense, manual, and error-prone.",
     challenge:"How might we leverage ML to make the case-review process 10× more efficient?",
-    research:"Through 1:1 interviews with case processors, managers, and directors (plus telemetry on how long each step actually takes), I mapped the intake, triage, review, and reporting workflow and its pain points. In a regulated, access-restricted environment, building trust was a prerequisite to research.",
+    research:"Through 1:1 interviews with case processors, managers, and directors — plus telemetry on how long each step actually takes — I mapped the intake, triage, review, and reporting workflow and its pain points. In a regulated, access-restricted environment, building trust was a prerequisite to research.",
     approach:"ML proposes each report field with a confidence signal, linked to highlighted source text in an inline PDF; the analyst confirms or corrects in a single action. A key learning reshaped the product: fully auto-generated reports weren't accurate enough for users to trust and actually slowed them down, so we scaled back to surfacing pre-fillable fields with suggestions. Project Settings were made highly configurable because required fields differ per client.",
     solution:"Inline PDF annotation with ML-highlighted ICSR fields, fill-in suggestions drawn from the source, configurable per-client projects, and article import from sources like Embase with file-level upload statuses and case linking.",
-    reflection:"Automation bias is a real risk when outputs feed reimbursement and compliance. Trust comes from evidence in context, showing why, one glance away, not from a black box."
+    reflection:"Automation bias is a real risk when outputs feed reimbursement and compliance. Trust comes from evidence in context — showing why, one glance away — not from a black box."
   },
   ubersense:{
-    context:"Before Ubersense, slow-motion technique analysis meant buying expensive high-speed cameras. Ubersense let anyone use the high-frame-rate camera already in their phone to record, slow down, and analyze movement, democratizing coaching for coaches and athletes worldwide.",
+    context:"Before Ubersense, slow-motion technique analysis meant buying expensive high-speed cameras. Ubersense let anyone use the high-frame-rate camera already in their phone to record, slow down, and analyze movement — democratizing coaching for coaches and athletes worldwide.",
     challenge:"How might we make it easy to organize videos and improve the feedback coaches give athletes?",
     research:"On-site visits and customer research showed users organized videos three ways: athletes recording themselves, 1:1 private coaches, and team coaches. Because people recorded in quick succession, videos defaulted to Untagged with near-identical thumbnails, making them hard to find later.",
     approach:"Recording from a specific athlete's page pre-populates tag fields (later, computer vision suggested tags automatically) and doubles as a quick review pass. To deepen coaching, I added keyframe comments, side-by-side comparison, and drawing tools, then brought the slow-motion scrubber to the web, where the hard part was inconsistent frame rates across the many Android devices.",
     solution:"Suggested tags, keyframe comments, frame-locked side-by-side comparison, annotations and drawing tools, and a web video player with athlete profiles.",
-    reflection:"The value was never two videos playing; it was the same instant of motion, on demand. Ubersense grew past four million downloads and was acquired by Hudl."
+    reflection:"The value was never two videos playing — it was the same instant of motion, on demand. Ubersense grew past four million downloads and was acquired by Hudl."
   },
   casetext:{
-    context:"Casetext was a legaltech startup helping legal professionals produce higher-quality work faster with AI, later acquired for $650M. Legal research is genuinely hard: relevance depends on jurisdiction, facts, and a hierarchy of primary and secondary sources, yet lawyers were bound to an antiquated process of guessing keywords until they stumbled onto good results.",
+    context:"Casetext was a legaltech startup helping legal professionals produce higher-quality work faster with AI, later acquired for $650M. Legal research is genuinely hard: relevance depends on jurisdiction, facts, and a hierarchy of primary and secondary sources — yet lawyers were bound to an antiquated process of guessing keywords until they stumbled onto good results.",
     challenge:"What if lawyers weren't restricted by traditional keyword and Boolean search?",
-    research:"I ran 1:1 interviews with attorneys across single-state, multi-state, and federal practices, plus moderated usability tests, and advocated for accessibility with inclusive-design interviews. Users hit real friction with the NLP search and filter discoverability; some even requested filters that already existed.",
+    research:"I ran 1:1 interviews with attorneys across single-state, multi-state, and federal practices, plus moderated usability tests, and advocated for accessibility with inclusive-design interviews. Users hit real friction with the NLP search and filter discoverability — some even requested filters that already existed.",
     approach:"A card-sorting exercise helped reprioritize the information architecture, then I iterated the results page through several rounds: simplifying and re-ranking filters by usage, differentiating content types without pushing the first case below the fold, and testing onboarding. Small user education placed inside the search bar moved the needle most. The final layout moved navigation to the left to make room for AllSearch, Compose, and CARA AI.",
     solution:"A redesigned global search and results experience built on parallel, context-aware search, clearer content-type filtering, and a responsive component library built from the ground up for the meaningful share of attorneys researching on phones and tablets.",
     reflection:"The lawyer's own brief already encodes the facts, issues, and jurisdiction a search needs, so the document becomes the query. Meeting users inside their existing habits beat asking them to learn new UI."
   }
-};
-/* Static screenshots from the older portfolio version (img/portfolio/<name>.png). */
-const GALLERY={
-  airforce:[
-    ['airforce_1','The draft report','Where aircrew assemble a mission report, field by field.'],
-    ['airforce_2','Early report creation','An early exploration of the report-building flow.'],
-    ['airforce_3','Map-assisted coordinates','A map appears as coordinates are entered, catching the most common errors.'],
-    ['airforce_4','Auto-detected fields','The app pre-fills routine report fields to cut manual entry.'],
-    ['airforce_5','Confirming the prefill','Analysts verify and correct auto-detected fields before publishing.'],
-    ['airforce_6','Mission event timeline','Every observation laid out in order along the mission.'],
-    ['airforce_7','Reports on a map','Published reports plotted geospatially for the whole operating picture.'],
-    ['airforce_9','Event iconography','Custom icons make event types legible at a glance.'],
-    ['airforce_8','Event heatmap','Density of events by type and location, for analysis.']
-  ],
-  reviewer:[
-    ['reviewer','The case page','Improved field organization, a fill-in dropdown, and inline PDF annotations.'],
-    ['reviewer2','ML annotations','The sidebar surfaces ML-suggested ICSR fields, each linked to its source.'],
-    ['reviewer4','Prefillable fields','Auto-detecting report fields from the source document.'],
-    ['reviewer3','Import history','Per-file upload statuses so users can track what came in.']
-  ],
-  ubersense:[
-    ['ubersense_1-min','Video library','Recordings auto-tagged and organized so coaches and athletes can find them later.'],
-    ['ubersense_2-min','Slow motion and drawing tools','Angle lines, shapes, and markers to call out technique frame by frame.'],
-    ['ubersense_3-min','Voice-over feedback','Narration recorded over an annotated clip, so feedback sticks after the lesson.'],
-    ['ubersense_4-min','Keyframe comments','Comments pinned to a specific moment in the motion.'],
-    ['ubersense_5-min','Side-by-side comparison','Frame-locked comparison of two clips at the same instant of motion.'],
-    ['ubersense_6-min','Computer-vision tagging','Detecting the athlete and technique to suggest tags automatically.'],
-    ['ubersense_7','Press coverage','Ubersense used by the U.S. bobsled team to train for the Sochi Olympics.']
-  ],
-  casetext:[
-    ['casetext','AllSearch','Parallel search across a brief bank surfaces conceptually similar passages and reused language.'],
-    ['casetext2','Brief bank setup','Inline guidance nudges users toward conceptual parallel search over keyword search.'],
-    ['casetext3','Codified-law navigation','Browsing statutes by title and section, reusing the core search patterns.'],
-    ['casetext5','Case-law results','Content-type filters, relevance ranking, and a plain-language summary that orients attorneys.'],
-    ['casetext4','Responsive system','The results experience built as a responsive component set across breakpoints.']
-  ]
-};
-/* Overview meta per project: responsibilities, key outcomes, team (best-guess, edit to taste). */
-const OVMETA={
-  airforce:{role:['Research & synthesis','Prototyping & testing','Interaction & visual design','Design system'],outcomes:['8× faster report creation','100% user adoption'],team:['Balanced team of PMs & engineers']},
-  reviewer:{role:['Research & synthesis','Prototyping','Interaction & visual design','ML collaboration'],outcomes:['33% faster case review','1,000+ users across 20 clients'],team:['Product, engineering & ML']},
-  ubersense:{role:['User research','iOS & Android design','Prototyping','Web video player'],outcomes:['4M+ downloads','Used by the U.S. Olympic bobsled team'],team:['Engineering','VP of Product','CEO']},
-  casetext:{role:['Core search redesign','Component library','Prototyping & testing','User research'],outcomes:['40% more searches','Web + mobile experience'],team:['Product & ML team','CPO, CTO & CIO (innovation)']}
 };
 function caseBody(p){
   var _mob=SHOT_MOBILE.indexOf(p.slug)>=0;
@@ -837,33 +700,12 @@ function caseBody(p){
     <div class="case-impact">${p.impact.map(m=>`<div class="ci"><div class="ci-n">${m[0]}</div><div class="ci-meta"><div class="ci-t">${m[1]}</div>${m[2]?`<p class="ci-d">${m[2]}</p>`:''}</div></div>`).join('')}</div>
   </div></div>` : '';
   const deck = DECKS[p.slug] ? `
-  <div class="case-deck-block">
+  <div class="case-deck-block"><div class="case-deck-label">Case study deck</div>
     <div class="case-deck"><iframe src="${DECKS[p.slug]}" allowfullscreen loading="lazy" title="${p.title} case study deck"></iframe></div>
   </div>` : '';
   var L=CASE_LONG[p.slug]||{};
   const challenge = L.challenge?`
   <div class="case-quote"><div class="ql">Design challenge</div><p class="q">${L.challenge}</p></div>`:'';
-  // TEMP: embedded Figma deck + static screenshot gallery (written case-study text hidden for now).
-  var gal = GALLERY[p.slug] || [];
-  var _cg='case-gallery cg-'+p.slug+(_mob?' cg-phone':'');
-  var _esc=function(x){return (x||'').replace(/"/g,'&quot;');};
-  var _cards=gal.map(function(g){var cap=(g[1]||g[2])?'<figcaption class="cg-card-cap">'+(g[1]?'<span class="cg-h">'+g[1]+'</span>':'')+(g[2]?'<span class="cg-s">'+g[2]+'</span>':'')+'</figcaption>':'';return '<div class="cg-card" role="button" tabindex="0" aria-label="'+_esc(g[1]||p.title)+'">'+cap+'<div class="cg-media"><img src="img/portfolio/'+g[0]+'.png" alt="'+_esc(g[1]||p.title)+'" loading="lazy" draggable="false"></div></div>';}).join('');
-  var _slides=gal.map(function(g){var cap=(g[1]||g[2])?'<figcaption>'+(g[1]?'<span class="cg-h">'+g[1]+'</span>':'')+(g[2]?'<span class="cg-s">'+g[2]+'</span>':'')+'</figcaption>':'';return '<figure class="cg-slide">'+cap+'<div class="cg-slide-media"><img src="img/portfolio/'+g[0]+'.png" alt="'+_esc(g[1]||p.title)+'" loading="lazy"></div></figure>';}).join('');
-  var galHTML = gal.length ? '<div class="'+_cg+'"><div class="cg-strip">'+_cards+'</div><button class="cg-explore" type="button"><span>Explore the gallery</span><svg class="cg-explore-ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"></path><path d="M10 20H4v-6"></path></svg></button><div class="cg-modal" hidden><button class="cg-modal-close" type="button" aria-label="Close gallery"><span class="cg-close-x" aria-hidden="true">&#10005;</span>Close</button><div class="cg-modal-scroll">'+_slides+'</div></div></div>' : '';
-  var ov = OVMETA[p.slug] || {};
-  var listCell = function(label, items){ items = (items||[]).filter(Boolean); return items.length ? '<div><div class="k">'+label+'</div>'+items.map(function(it){return '<div class="v">'+it+'</div>';}).join('')+'</div>' : ''; };
-  var teamItems = ov.team ? (Array.isArray(ov.team)?ov.team:[ov.team]) : [p.team];
-  var overview = `
-  <div class="case-block ov-block"><div class="body">
-    <p class="ov-text">${p.desc}</p>
-    <div class="case-meta ov">
-      ${listCell('Responsibilities', ov.role || [p.role])}
-      ${listCell('Outcomes', ov.outcomes)}
-      ${listCell('Collaborators', teamItems)}
-    </div>
-  </div></div>`;
-  return `${overview}${deck}${galHTML}`;
-  /* --- restore the written case study by deleting this comment block and the temp return above ---
   return `
   ${deck}
   <div class="case-block"><h3>Overview</h3><div class="body">
@@ -888,49 +730,22 @@ function caseBody(p){
   </div></div>
   ${impact}
   ${L.reflection?`<div class="case-block"><h3>Reflection</h3><div class="body"><p>${L.reflection}</p></div></div>`:''}
-  `;
-  --- */
-  }
+  `;}
 
 /* ===== SELECTED WORK carousel is now a Framer Motion island (see module script below) ===== */
 window.FEATURED=FEATURED;
 
 /* ===== CASE STUDY NAV ===== */
-/* Case-study gallery: draggable strip + fullscreen modal */
-function initCaseGallery(root){
-  var strip=root.querySelector('.cg-strip');
-  var modal=root.querySelector('.cg-modal');
-  if(!strip||!modal)return;
-  var scroller=modal.querySelector('.cg-modal-scroll');
-  var slides=[].slice.call(modal.querySelectorAll('.cg-slide'));
-  var cards=[].slice.call(strip.querySelectorAll('.cg-card'));
-  var dragging=false, moved=false, startX=0, startY=0, startScroll=0, pressedCard=null;
-  strip.addEventListener('pointerdown',function(e){moved=false;startX=e.clientX;startY=e.clientY;pressedCard=e.target.closest?e.target.closest('.cg-card'):null;if(e.pointerType!=='touch'){dragging=true;startScroll=strip.scrollLeft;try{strip.setPointerCapture(e.pointerId);}catch(_){}}});
-  strip.addEventListener('pointermove',function(e){if(Math.abs(e.clientX-startX)>8||Math.abs(e.clientY-startY)>8)moved=true;if(dragging)strip.scrollLeft=startScroll-(e.clientX-startX);});
-  strip.addEventListener('pointerup',function(){dragging=false;if(!moved&&pressedCard){var idx=cards.indexOf(pressedCard);if(idx>=0)openModal(idx);}pressedCard=null;});
-  strip.addEventListener('pointercancel',function(){dragging=false;pressedCard=null;});
-  function onKey(e){if(e.key==='Escape')closeModal();}
-  function openModal(i){modal.hidden=false;document.documentElement.classList.add('cg-lock');document.addEventListener('keydown',onKey);requestAnimationFrame(function(){var t=slides[i]?slides[i].offsetTop:0;scroller.scrollTop=Math.max(0,t-24);});}
-  function closeModal(){modal.hidden=true;document.documentElement.classList.remove('cg-lock');document.removeEventListener('keydown',onKey);}
-  cards.forEach(function(c,i){c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(i);}});});
-  var exp=root.querySelector('.cg-explore');if(exp)exp.addEventListener('click',function(){openModal(0);});
-  var cb=modal.querySelector('.cg-modal-close');if(cb)cb.addEventListener('click',closeModal);
-}
-function initCaseGalleries(){document.querySelectorAll('#cBody .case-gallery').forEach(initCaseGallery);}
 function openCase(slug){
   const i=FEATURED.findIndex(p=>p.slug===slug),p=FEATURED[i];if(!p)return;
-  document.documentElement.classList.remove('cg-lock');
-  document.body.dataset.case=slug;
   document.getElementById('cTitle').textContent=p.title;
   document.getElementById('cSub').textContent=p.sub;
-  var LOGOS={airforce:'img/logos/airforce.png',ubersense:'img/logos/ubersense.svg',reviewer:'img/logos/reviewer.svg',casetext:'img/logos/casetext.svg'};
-  var _logo=document.getElementById('cLogo');
-  if(_logo){ if(LOGOS[p.slug]){ _logo.src=LOGOS[p.slug]; _logo.className='case-logo logo-'+p.slug; _logo.hidden=false; } else { _logo.hidden=true; _logo.removeAttribute('src'); } }
   var _mob=['centegix','ubersense','truepill','benchsentry'].indexOf(p.slug)>=0;
   var _cov=document.getElementById('cCover');
-  _cov.style.display='none';   // cover image removed; case study leads with the Figma deck
+  _cov.className='case-cover '+(_mob?'shot-mobile':'shot')+' bg-'+p.bg;
+  _cov.style.backgroundImage="url('img/work/solutions/"+p.slug+".png')";
+  document.getElementById('cCoverWm').textContent=p.title+' · cover image';
   document.getElementById('cBody').innerHTML=caseBody(p);
-  requestAnimationFrame(initCaseGalleries);
   const next=FEATURED[(i+1)%FEATURED.length];
   const prev=FEATURED[(i-1+FEATURED.length)%FEATURED.length];
   document.getElementById('casePrev').onclick=()=>openCase(prev.slug);
@@ -1026,21 +841,21 @@ if(document.fonts&&document.fonts.ready) document.fonts.ready.then(setEngWidth);
     // {type:"shot", slug:"truepill", title:"Truepill", disc:"Healthcare · B2B Pharmacy", img:"img/work/truepill.png", bg:"linear-gradient(150deg,#3f93bd,#22708f)"},   // hidden
     // {type:"mobile", slug:"benchsentry", title:"BenchSentry", disc:"Mobile · IoT · Deliveries", img:"img/work/benchsentry.png", bg:"linear-gradient(150deg,#8a64c4,#5d3d96)"}   // hidden
   ];
-  const COPIES = 1;   // static: only the 4 cards, no repeats (carousel no longer scrolls)
+  const COPIES = 6;
   const tiles = [];
   for(let i=0;i<COPIES;i++){ for(const d of DATA) tiles.push(d); }
 
   function fillHTML(d){
     // Full-bleed (no ambient padding): the actual redesigned screen, focal-cropped per project.
     // T[slug] = [background-size, background-position]; desktop zooms in, mobile covers a band.
-    var T={benchsentry:['cover','50% 30%'],centegix:['cover','50% 20%'],truepill:['cover','50% 28%'],ubersense:['100%','50% 50%'],
-      casetext:['100%','50% 50%'],parexelgpt:['175%','46% 42%'],reviewer:['100%','50% 50%'],
-      airforce:['100%','50% 50%']};
+    var T={benchsentry:['cover','50% 30%'],centegix:['cover','50% 20%'],truepill:['cover','50% 28%'],ubersense:['cover','50% 33%'],
+      casetext:['175%','24% 32%'],parexelgpt:['175%','46% 42%'],reviewer:['180%','72% 50%'],
+      airforce:['175%','46% 55%']};
     var t=T[d.slug]||['cover','50% 50%'];
     return '<div class="fill tile" style="background-image:url(\'img/work/solutions/'+d.slug+'.png\');background-size:'+t[0]+';background-position:'+t[1]+'"></div>';
   }
 
-  const vp = document.createElement('div'); vp.className='tiles-viewport'; vp.style.cursor='default';
+  const vp = document.createElement('div'); vp.className='tiles-viewport';
   const track = document.createElement('div'); track.className='tiles-track';
   vp.appendChild(track); root.appendChild(vp);
   track.innerHTML = tiles.map(function(d,i){
@@ -1057,18 +872,21 @@ if(document.fonts&&document.fonts.ready) document.fonts.ready.then(setEngWidth);
   slots.forEach(function(el,i){ el.style.zIndex = 1000 - i; });
 
   let baseX=0, period=1200, vel=0, speed=0.5, dragging=false, paused=false, hovered=null;
-  let startBase=0, startPX=0, startPY=0, lastPX=0, heldSlot=null, tiltCard=null;
+  let startBase=0, startPX=0, lastPX=0, heldSlot=null, tiltCard=null;
   let spun=false, spinning=false, spinFrom=0, spinTo=0, spinT0=0;
-  const SPREAD=240, DECAY=0.82, SPIN_DUR=1700;
+  const SPREAD=150, DECAY=0.72, SPIN_DUR=1700;
 
   function measure(){
     const s = track.querySelectorAll('.mtile-slot');
-    if(!s.length) return;
-    // static: center the whole row of cards in the viewport
-    const first = s[0], last = s[s.length-1];
-    const rowW = (last.offsetLeft + last.offsetWidth) - first.offsetLeft;
-    baseX = Math.round(vp.clientWidth/2 - (first.offsetLeft + rowW/2));
-    track.style.transform = 'translate3d('+baseX+'px,0,0)';
+    if(s.length > DATA.length){ const p = s[DATA.length].offsetLeft - s[0].offsetLeft; if(p>0) period=p; }
+    // once we have a real period, center a middle tile and kick off the spin-in
+    if(!spun && period>0 && s.length>4){
+      const mid = Math.floor(DATA.length/2);
+      const center = vp.clientWidth/2 - (s[mid].offsetLeft + s[mid].offsetWidth/2);
+      baseX = center;
+      spinFrom = center; spinTo = center - period*2;   // 2 full loops -> lands back on the centered frame
+      spinning = true; spinT0 = 0; spun = true;
+    }
   }
   measure();
   if(window.ResizeObserver){ const ro=new ResizeObserver(measure); ro.observe(track); }
@@ -1077,16 +895,33 @@ if(document.fonts&&document.fonts.ready) document.fonts.ready.then(setEngWidth);
 
   function easeOut(t){ return t>=1 ? 1 : 1 - Math.pow(2, -10*t); }
 
-  /* static row: no animation loop; the transform is set once in measure() and on resize */
+  function loop(){
+    if(spinning){
+      if(!spinT0) spinT0 = performance.now();
+      const k = Math.min(1, (performance.now() - spinT0) / SPIN_DUR);
+      baseX = spinFrom + (spinTo - spinFrom) * easeOut(k);
+      if(k >= 1) spinning = false;
+    }
+    else if(dragging){ /* baseX is set by pan; keep it continuous so the seam never resets mid-drag */ }
+    else if(Math.abs(vel)>0.12){ baseX += vel; vel *= 0.93; }
+    else if(!paused){ baseX -= speed; }
+    // normalize baseX into one period only when NOT dragging (kills float drift without fighting the drag)
+    if(!dragging && period>0){ while(baseX <= -period) baseX += period; while(baseX > 0) baseX -= period; }
+    // display always wraps seamlessly; translate3d keeps it on a GPU layer so the period reset never repaints/jitters
+    var x = baseX;
+    if(period>0){ x = x % period; if(x > 0) x -= period; }
+    track.style.transform = 'translate3d('+x+'px,0,0)';
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
 
   function setHover(h){
     hovered = h;
-    var sp = parseFloat(getComputedStyle(vp).getPropertyValue('--spread')) || SPREAD;
     slots.forEach(function(el,i){
       if(h==null || dragging){ el.style.transform=''; el.style.zIndex=1000-i; return; }
       if(i===h){ el.style.transform='translateX(0px)'; el.style.zIndex=3000; return; }
       const a=Math.abs(i-h);
-      const dx=Math.sign(i-h)*sp*Math.pow(DECAY,a-1);
+      const dx=Math.sign(i-h)*SPREAD*Math.pow(DECAY,a-1);
       el.style.transform='translateX('+dx+'px)'; el.style.zIndex=1000-i;
     });
   }
@@ -1112,18 +947,28 @@ if(document.fonts&&document.fonts.ready) document.fonts.ready.then(setEngWidth);
     card.style.transform='rotateX('+(-py*14).toFixed(2)+'deg) rotateY('+(px*18).toFixed(2)+'deg)';
     tiltCard=card;
   });
-  // static row: tap-to-open only (no drag, no wheel-scroll)
+  vp.addEventListener('wheel', function(e){
+    if(Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+    e.preventDefault(); spinning=false; vel=0; baseX -= e.deltaX;
+  }, {passive:false});
+
   vp.addEventListener('pointerdown', function(e){
-    startPX=e.clientX; startPY=e.clientY;
+    spinning=false; dragging=true; vel=0; startBase=baseX; startPX=e.clientX; lastPX=e.clientX;
+    vp.classList.add('dragging');
     if(hovered!=null && slots[hovered]){ heldSlot=slots[hovered]; heldSlot.classList.add('is-held'); }
+    if(vp.setPointerCapture){ try{ vp.setPointerCapture(e.pointerId); }catch(_){} }
+  });
+  window.addEventListener('pointermove', function(e){
+    if(!dragging) return;
+    baseX = startBase + (e.clientX - startPX);
+    vel = e.clientX - lastPX; lastPX = e.clientX;
   });
   window.addEventListener('pointerup', function(e){
+    if(!dragging) return;
+    dragging=false; vp.classList.remove('dragging');
     if(heldSlot){ heldSlot.classList.remove('is-held'); heldSlot=null; }
-    // tap-to-open only on a real tap (not a scroll/drag): small movement on BOTH axes
-    if(Math.abs(e.clientX - startPX) < 8 && Math.abs(e.clientY - startPY) < 8){
-      var slot = e.target && e.target.closest && e.target.closest('.mtile-slot');
-      var i = slot && slot.dataset.i!=null ? +slot.dataset.i : hovered;
-      var d = (i!=null) ? tiles[i] : null;
+    if(Math.abs(e.clientX - startPX) < 5 && hovered!=null){
+      const d = tiles[hovered];
       if(d && d.slug && window.openCase) window.openCase(d.slug);
     }
   });
