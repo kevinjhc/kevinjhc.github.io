@@ -391,6 +391,15 @@ body:not(.light) .about-lede .dim{color:rgba(243,243,241,.42)}
 .clients-label{font-family:var(--f-label);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:clamp(28px,3.2vw,46px);text-align:center}
 .clients-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .client-logo{aspect-ratio:5/2;display:grid;place-items:center;padding:10px;box-shadow:1px 0 0 var(--line),0 1px 0 var(--line);min-height:0;overflow:hidden}
+.client-pop{position:fixed;z-index:200;left:0;top:0;width:300px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 50px rgba(10,10,12,.16),0 3px 10px rgba(10,10,12,.08);padding:20px;opacity:0;transform:translateY(-4px);transition:opacity .16s var(--ease),transform .16s var(--ease);pointer-events:none}
+.client-pop.open{opacity:1;transform:none}
+.client-pop .cp-head{font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+.client-pop .cp-desc{margin:11px 0 0;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.client-pop .cp-row{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.client-pop .cp-k{font-family:var(--f-label);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);margin-bottom:6px}
+.client-pop .cp-v{font-size:14px;color:var(--ink)}
+.client-pop .cp-flag{font-size:14px}
+.client-pop .cp-chip{display:inline-flex;align-items:center;font-size:13px;color:var(--ink-soft);border:1px solid var(--line);border-radius:100px;padding:5px 13px}
 .client-logo img{max-width:80%;max-height:46px;width:auto;object-fit:contain}
 @media(max-width:880px){.clients-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.clients-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -968,6 +977,48 @@ window.addEventListener('popstate',function(){ if(document.body.classList.contai
 document.getElementById('caseBack').addEventListener('click',goHome);
 document.querySelectorAll('[data-nav]').forEach(a=>a.addEventListener('click',()=>{if(document.body.classList.contains('case-open'))goHome();}));
 window.openCase=openCase;   // exposed for the Framer Motion carousel island
+
+/* Client hover popovers (hover-capable devices only) — blurbs are best-guess, edit to taste */
+(function(){
+  if(!window.matchMedia||!window.matchMedia('(hover: hover)').matches)return;
+  var C={
+    amex:{n:'American Express GBT',d:'A leading B2B platform for corporate travel and expense, operating at global scale.',i:'Business travel / SaaS',w:'Design systems',hq:'New York',note:'NYSE-listed (GBTG)'},
+    expressscripts:{n:'Express Scripts',d:'A leading U.S. pharmacy benefit manager, now part of Cigna Evernorth.',i:'Healthcare / Pharmacy',w:'Design systems',hq:'St. Louis',note:'Part of Cigna'},
+    accredo:{n:'Accredo',d:'A specialty pharmacy supporting patients with complex, chronic conditions.',i:'Specialty pharmacy',w:'Symptom tracking and medication adherence',hq:'Memphis',note:'Part of Evernorth'},
+    trellis:{n:'TrellisRx',d:'Builds and runs integrated specialty pharmacy programs for health systems.',i:'Healthcare / Pharmacy',w:'Admin dashboard and prescription workflows',hq:'Atlanta'},
+    pivotal:{n:'Pivotal Labs',d:'The agile software consultancy behind Cloud Foundry, known for pair programming and XP.',i:'Software / Cloud',w:'Lead designer for consulting projects',hq:'San Francisco',note:'Acquired by VMware'},
+    benchsentry:{n:'BenchSentry',d:'A smart, weatherproof delivery box that gives couriers one-time access to stop package theft.',i:'Consumer IoT / Deliveries',w:'Mobile design'},
+    harvard:{n:'Harvard Medical School',d:'One of the foremost medical schools and biomedical research institutions in the world.',i:'Medical education / Research',w:'Design research tool',hq:'Boston',note:'Founded 1782'},
+    partners:{n:'Partners HealthCare',d:'A Boston academic health system founded by Mass General and Brigham, now Mass General Brigham.',i:'Healthcare',w:'Mobile prototypes for type 2 diabetes and peripheral arterial disease',hq:'Boston',note:'Now Mass General Brigham'},
+    johnhancock:{n:'John Hancock',d:'A U.S. life insurance and financial services company, part of Manulife.',i:'Insurance / Finance',w:'COIN, a mobile investing platform for millennials',hq:'Boston',note:'Part of Manulife'},
+    bostonscientific:{n:'Boston Scientific',d:'A global developer of medical devices for minimally invasive and interventional care.',i:'Medical devices',w:'App for heart failure patients',hq:'Marlborough, MA',note:'NYSE-listed (BSX)'}
+  };
+  var cells=[].slice.call(document.querySelectorAll('.client-logo'));
+  if(!cells.length)return;
+  var pop=document.createElement('div');pop.className='client-pop';document.body.appendChild(pop);
+  var t=null;
+  function slugOf(cell){var im=cell.querySelector('img');if(!im)return null;var m=(im.getAttribute('src')||'').match(/([a-z0-9_-]+)\.svg/i);return m?m[1]:null;}
+  function show(cell){
+    var c=C[slugOf(cell)];if(!c)return;
+    var h='<div class="cp-head">'+c.n+'</div><p class="cp-desc">'+c.d+'</p>';
+    h+='<div class="cp-row"><div class="cp-k">Industry</div><div class="cp-v">'+c.i+'</div></div>';
+    if(c.w)h+='<div class="cp-row"><div class="cp-k">What I did</div><div class="cp-v">'+c.w+'</div></div>';
+    pop.innerHTML=h;
+    var r=cell.getBoundingClientRect();
+    var pw=pop.offsetWidth,ph=pop.offsetHeight;
+    var left=Math.max(12,Math.min(r.left+r.width/2-pw/2,window.innerWidth-pw-12));
+    var top=r.bottom+10; if(top+ph>window.innerHeight-12&&r.top-ph-10>12)top=r.top-ph-10;
+    pop.style.left=left+'px';pop.style.top=top+'px';
+    pop.classList.add('open');
+  }
+  function hide(){pop.classList.remove('open');}
+  cells.forEach(function(cell){
+    if(!C[slugOf(cell)])return;
+    cell.addEventListener('mouseenter',function(){clearTimeout(t);show(cell);});
+    cell.addEventListener('mouseleave',function(){t=setTimeout(hide,90);});
+  });
+  window.addEventListener('scroll',hide,{passive:true});
+})();
 
 /* ===== INTERACTIONS ===== */
 
