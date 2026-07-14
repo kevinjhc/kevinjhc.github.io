@@ -386,7 +386,7 @@ body:not(.light) .about-lede .dim{color:rgba(243,243,241,.42)}
 .about-sub h5{font-family:var(--f-label);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:16px}
 .about-sub ul{list-style:none;display:flex;flex-direction:column;gap:11px}
 .about-sub li{font-size:14.5px;color:var(--ink)}
-@media(max-width:460px){.about-sub{grid-template-columns:1fr;gap:26px}}
+@media(max-width:460px){.about-sub{gap:20px}}
 .clients{margin-top:clamp(64px,8vw,120px)}
 .clients-label{font-family:var(--f-label);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:clamp(28px,3.2vw,46px);text-align:center}
 .clients-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
@@ -426,7 +426,7 @@ body.case-open #home{display:none}
 body.case-open header.nav{display:none}
 .case-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:101;width:max-content;max-width:calc(100vw - 24px);display:flex;align-items:center;gap:4px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border:1px solid var(--line);border-radius:100px;padding:5px;box-shadow:0 6px 20px rgba(10,10,11,.10),0 1px 3px rgba(10,10,11,.06)}
 .case-nav-btn{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;color:var(--ink);border-radius:100px;padding:8px 15px;white-space:nowrap;transition:background .25s,color .25s}
-.case-nav-btn:hover{background:color-mix(in srgb,var(--ink) 7%,transparent)}
+@media(hover:hover){.case-nav-btn:hover{background:color-mix(in srgb,var(--ink) 7%,transparent)}}
 .case-nav-btn.mid{color:var(--ink-soft)}
 .case-nav-btn.mid:hover{color:var(--ink)}
 .case-nav-btn.icon{padding:8px 11px}
@@ -938,6 +938,7 @@ function openCase(slug){
   document.title=p.title+' · Kevin Chang';
   buildCaseThumbs();
   document.querySelectorAll('#caseThumbs .case-thumb').forEach(function(t){t.classList.toggle('active',t.dataset.slug===p.slug);});
+  if(!document.body.classList.contains('case-open')){ try{history.pushState({caseView:true},'');}catch(e){} }
   document.body.classList.add('case-open');
   document.getElementById('case').classList.add('active');
   window.scrollTo({top:0,behavior:'auto'});
@@ -962,8 +963,10 @@ function closeCase(){
   document.title='Kevin Chang · Product Designer & Design Engineer';
   updateTheme();   // recompute dark/light for the home scroll position we land back on
 }
-document.getElementById('caseBack').addEventListener('click',closeCase);
-document.querySelectorAll('[data-nav]').forEach(a=>a.addEventListener('click',()=>{if(document.body.classList.contains('case-open'))closeCase();}));
+function goHome(){ if(history.state && history.state.caseView){ history.back(); } else { closeCase(); } }
+window.addEventListener('popstate',function(){ if(document.body.classList.contains('case-open'))closeCase(); });
+document.getElementById('caseBack').addEventListener('click',goHome);
+document.querySelectorAll('[data-nav]').forEach(a=>a.addEventListener('click',()=>{if(document.body.classList.contains('case-open'))goHome();}));
 window.openCase=openCase;   // exposed for the Framer Motion carousel island
 
 /* ===== INTERACTIONS ===== */
